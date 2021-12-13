@@ -191,20 +191,31 @@ input[type="search"]::-webkit-search-results-decoration {
 
 //----------------WRAPPER---------------------
 .wrapper {
-  max-width: 1920px;
+  overflow: hidden;
 }
 
-//удалить!
+
 .main-page {
-  background-color: rgb(40, 49, 41);
+  // background-color: rgb(58, 75, 60); //удалить!
+  display: flex;
+}
+//////////////////////
+
+._left-space {
+  width: 100px;
 }
 
+
+._container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 //----------------HEADER---------------------
 .header {
   display: flex;
   &__phones {
     padding-top: 8px;
-    padding-left: 440px;
   }
   &__bird-logo {
     padding-left: 54px;
@@ -227,7 +238,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 .book-btn {
-  padding: 11px 28px 12px;
+  padding: 11px 28px 11px;
     font: {
       family: 'Montserrat';
       size: 14px;
@@ -239,11 +250,39 @@ input[type="search"]::-webkit-search-results-decoration {
     border-radius: 63px;
 }
 .main-page {
+  position: relative;
   &__header {
-    margin-top: 40px;
+    padding-top: 40px;
   }
   &__menu {
     margin-top: 30px;
+  }
+  &__bg-picture {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+  }
+  &__title {
+    margin: {
+      top: 150px;
+      bottom: 23px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 45px;
+  }
+  &__shedule {
+    margin-bottom: 40px;
+  }
+  &__book-and-more-btns {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &__book-btn_fill {
+    margin-right: 30px;
+  }
+  &__nav-btns {
+    margin-bottom: 205px;
   }
 }
 .phones {
@@ -270,7 +309,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 122%;
 }
 .menu {
-  padding-left: 440px;
+  // padding-left: 440px;
   &__list, &__link {
     display: flex;
   }
@@ -294,6 +333,109 @@ input[type="search"]::-webkit-search-results-decoration {
       padding-top: 7px;
     }
   }
+  &__arrow-down-mini {
+    padding-left: 6px;
+  }
+  &__point_for-kids {
+    padding-left: 24px;
+  }
 }
-
-
+.chapter-title {
+  font: {
+    family: 'Montserrat';
+    size: 56px;
+    weight: 700
+  }
+  color: #fff;
+  line-height: 122%;
+}
+.chapter-subtitle {
+  font: {
+    family: 'Montserrat';
+    size: 20px;
+    weight: 400
+  }
+  color: #fff;
+  line-height: 122%;
+}
+.shedule {
+  display: flex;
+  &__days {
+    font: {
+      family: 'Montserrat';
+      size: 12px;
+      weight: 700
+    }
+    color: #fff;
+    line-height: 122%;
+    opacity: 0.5;
+  }
+  &__time {
+    font: {
+      family: 'Montserrat';
+      size: 16px;
+      weight: 400
+    }
+    color: #fff;
+    line-height: 125%;
+  }
+  &__first-part {
+    margin-right: 40px;
+  }
+}
+.book-btn_fill {
+  background: #E3BF77;
+  padding: 16px 30px 17px;
+}
+.book-btn_fill, .more-btn {
+  border-radius: 63px;
+  font: {
+    family: 'Montserrat';
+    size: 14px;
+    weight: 600
+  }
+  color: #fff;
+  line-height: 121%;  
+}
+.more-btn {
+  padding: 14px 28px 14px;
+  border: 2px solid rgba($color: #fff, $alpha: 0.5);
+}
+.nav-btns {
+  &__prev, &__next {
+    border: 2px solid #E3BF77;
+    border-radius: 50%;
+  }
+  &__prev {
+    padding: 10px 8px 8px 12px;
+    margin-right: 20px;
+  }
+  &__next {
+    padding: 10px 12px 8px 8px;
+  }
+}
+.divisions {
+  &__list {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__item:not(:first-child) {
+    opacity: 0.5;
+  }
+  &__title {
+    font: {
+      family: 'Montserrat';
+      size: 14px;
+      weight: 600
+    }
+    color: #fff;
+    line-height: 121%;
+    padding-top: 17px;  
+  }
+  &__underline {
+   display: block; 
+  }
+  
+}
