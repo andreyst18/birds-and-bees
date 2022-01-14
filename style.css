@@ -291,6 +291,18 @@ input[type="search"]::-webkit-search-results-decoration {
   width: calc(100% + 100px);
 }
 
+.main-page__bg-picture_active {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.main-page__bg-picture_inactive {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
 .main-page__title {
   margin-top: 150px;
   margin-bottom: 23px;
