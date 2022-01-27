@@ -1,3 +1,5 @@
+import './slider.js'
+
 const prevBtnMain = document.querySelector('.nav-btns__prev_main')
 const nextBtnMain = document.querySelector('.nav-btns__next_main')
 const mainPageTitle = document.querySelector('.main-page__title')
@@ -6,7 +8,7 @@ const sheduleDaysFirst = document.querySelector('.shedule__days_first')
 const sheduleTimeFirst = document.querySelector('.shedule__time_first')
 const sheduleDaysSecond = document.querySelector('.shedule__days_second')
 const sheduleTimeSecond = document.querySelector('.shedule__time_second')
-const mainBackground = document.querySelector('.main-page__bg-picture')
+const mainBackground = document.querySelector('.bg-picture')
 
 const places = [
   {
@@ -37,6 +39,10 @@ const places = [
   }
 ]
 
+const eventsNext = document.querySelector('.events__next'),
+      eventsPrev = document.querySelector('.events__prev')
+
+
 let currentPlace = 0
 let isNextMainPlace
 
@@ -56,14 +62,18 @@ function fillMainSection(index, direction) {
   } else if ((index < places.length - 1) && direction) {
     index++
   }
+  
   mainPageTitle.innerHTML = places[index].title
   mainPageSubTitle.innerHTML = places[index].subtitle
   sheduleDaysFirst.innerHTML = places[index].sheduleFirstPart.sheduleDays
   sheduleTimeFirst.innerHTML = places[index].sheduleFirstPart.sheduleTime
   sheduleDaysSecond.innerHTML = places[index].sheduleSecondPart.sheduleDays
   sheduleTimeSecond.innerHTML = places[index].sheduleSecondPart.sheduleTime
+  // mainBackground.classList.add('main-page__bg-picture_inactive')
   mainBackground.setAttribute('src', places[index].picture)
-      
+  // mainBackground.classList.add('main-page__bg-picture_active')
+  // mainBackground.classList.remove('main-page__bg-picture_inactive')
+        
   return index    
 }
 
