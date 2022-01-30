@@ -14,7 +14,7 @@ let current,
     shift,
     isNext
     
-
+console.log('asd')
 window.onload = () => {
   current = 0
   shift = 0
