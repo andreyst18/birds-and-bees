@@ -227,10 +227,14 @@
               </button>
             </div>
           </div>
-        </div>
+        
+
           <div class="events__main">
-            <!-- <div class="slider_1 events__swiper" id="events__swiper">
-                <div class="swiper-wrapper">
+            
+            <!-- Начало слайдера -->
+            
+            <div class="slider_1 events__slider slider-events">
+                <div class="swiper-wrapper slider_1-wrapper">
                   <div class="swiper-slide">
                     <div class="slider-events__item">
                       <img class="slider-events__photo" src="img/events/1.jpg" alt="1">
@@ -276,7 +280,9 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
+              <!-- Конец слайдера -->
+
                 <!-- <div class="events__slider">
               <div class=" slider slider-events">
                 <div class="slider-events__gallery">
@@ -325,6 +331,7 @@
               <div class="nav-line__thumb events__thumb"></div>
             </div> -->
           </div>
+          </div> контейнер
         </section>
 
       <section class="our-places">
@@ -503,47 +510,57 @@
         </div>
       </section>
       <footer class="footer">
-        <div class="_container">
-          <div class="footer__content">
-            <div class="footer__col footer__logo">
-              <img src="img/birds-and-bees-logo.png" alt="" srcset="">
-            </div>
-            <div class="footer__col">
-              <button class="book-btn">Забронировать</button>
-              <div class="call">
-                <div class="call__pic">
-                  <img src="img/phone-receiver.svg" alt="phone">
+        <div class="footer__main">
+          <div class="_container">          
+            <div class="footer__content">
+              <div class="footer__col footer__logo">
+                <img src="img/birds-and-bees-logo.png" alt="" srcset="">
+              </div>
+              <div class="footer__col">
+                <button class="book-btn">Забронировать</button>
+                <div class="call">
+                  <div class="call__pic">
+                    <img src="img/phone-receiver.svg" alt="phone">
+                  </div>
+                  <div class="call__text">Заказать звонок</div>
                 </div>
-                <div class="call__text">Заказать звонок</div>
               </div>
-            </div>
-            <div class="footer__col">
-              <div class="footer__phones phones">
-                <div class="phones__main-phone main-phone">7 (925) 225-38-38</div>
-                <div class="phones__additional-phone additional-phone">7 (495) 225-38-38</div>
+              <div class="footer__col">
+                <div class="footer__phones phones">
+                  <div class="phones__main-phone main-phone">7 (925) 225-38-38</div>
+                  <div class="phones__additional-phone additional-phone">7 (495) 225-38-38</div>
+                </div>
+                <div class="footer__outer-links outer-links-hor">
+                  <img class="outer-links-hor__item" src="img/vk-footer.svg" alt="vk-logo">
+                  <img class="outer-links-hor__item" src="img/aside/instagram-logo.svg" alt="instagram-logo">
+                  <img class="outer-links-hor__item" src="img/aside/facebook-logo.svg" alt="facebook-logo">
+                </div>
               </div>
-              <div class="footer__outer-links outer-links-hor">
-                <img class="outer-links-hor__item" src="img/vk-footer.svg" alt="vk-logo">
-                <img class="outer-links-hor__item" src="img/aside/instagram-logo.svg" alt="instagram-logo">
-                <img class="outer-links-hor__item" src="img/aside/facebook-logo.svg" alt="facebook-logo">
+              <div class="footer__col footer__subscribe">
+                <div class="footer__subscribe-text">
+                  Подпишитесь на рассылку Птицы и Пчёлы и будьте в курсе всех новостей и событий
+                </div>
+                <div class="footer__email email">
+                  <div class="email__text">E-mail:</div>
+                  <button class="email__subscribe subscribe-btn"></button>
+                </div>
+                <div class="footer__line"></div>
               </div>
-            </div>
-            <div class="footer__col footer__subscribe">
-              <div class="footer__subscribe-text">
-                Подпишитесь на рассылку Птицы и Пчёлы и будьте в курсе всех новостей и событий
-              </div>
-              <div class="footer__email email">
-                <div class="email__text">E-mail:</div>
-                <button class="email__subscribe subscribe-btn"></button>
-              </div>
-              <div class="footer__line"></div>
             </div>
           </div>
-          <div class="footer__footer">
-            <div class="footer__footer-part-1">© 2019 «Птицы и Пчёлы»</div>
-            <div class="footer__footer-part-2"></div>
+        </div> 
+            
+          <div class="footer__additional additional">
+            <div class="_container">
+              <div class="additional__content">
+                <div class="footer__additional-part-1">© 2019 «Птицы и Пчёлы»</div>
+                <div class="footer__additional-part-2 part-2">
+                  <div class="part-2__policy">Политика конфеденциальности</div>
+                  <div class="part-2__articles">Статьи</div>
+                </div>
+              </div>  
+            </div>
           </div>
-        </div>
       </footer>
     </div>
   </div>

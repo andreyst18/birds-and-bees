@@ -569,17 +569,11 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-bottom: 55px;
   }
   &__main {
+    position: relative; //для слайдера
+    
     background-color: #F9F9F9;
     min-height: 390px;
     min-width: 0;
-  }
-  &__nav-btns {
-    // display: flex;
-    // margin-left: (721 / 1140) * 100%;
-  }
-  &__slider {
-    height: 350px;
-    margin-bottom: 30px;
   }
   &-names__item {
     display: flex;
@@ -638,6 +632,38 @@ input[type="search"]::-webkit-search-results-decoration {
 
 //--------------Slider (Events)-------------------------
 
+.slider_1 {
+  position: absolute;
+  // overflow: hidden;
+  top: 0;
+  left: 0;
+  max-width: 1440px;
+  // margin-left: 0 auto;
+  // padding-left: 500px;
+  
+  // &-wrapper {
+  //   width: 800px;
+  // }
+}
+
+.slider-events {
+  &__photo {
+    width: 359px;
+    height: 295px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.15);
+  }
+  &__events-names {
+    margin-top: 30px;
+  }
+  &__item {
+    width: 359px;
+  }
+}
+
+
+/*
 .slider-events {
   position: absolute;
   max-width: 1471px;
@@ -668,21 +694,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 20px 0px 0px 100px;
 }
 
-
-//--------------Events Swiper--------------------------///
-
-.slider_1 {
-  width: 100%;
-  &-slide {
-    min-width: 359px;
-  }
-} 
-
-#events__swiper {
-  position: absolute;
-  margin: 0 auto;
-}
-
+*/
 
 
 //----------------------------our-places------------------------
@@ -906,7 +918,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 //------------------FOOTER--------------------//
 .footer {
-  background-color: #2D2D2D;
+  &__main {
+    background-color: #2D2D2D;
+  }
   &__content {
     display: flex;
     justify-content: space-between;
@@ -943,10 +957,35 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 0.1;
     margin-bottom: 42px;
   }
-  &__footer {
+  &__additional {
     background-color: #262626;
+    &-part-1,
+    &-part-2 {
+      font: {
+        family: Montserrat;
+        weight: 400;
+        size: 14px;
+      }
+      color: #FFFFFF;
+      opacity: 0.5;
+      line-height: 150%;
+    }
+  }
+}
+
+.additional {
+  &__content {
     display: flex;
     justify-content: space-between;
+  }
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+.part-2 {
+  display: flex;
+  &__policy {
+    margin-right: 40px;
   }
 }
 

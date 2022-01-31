@@ -626,14 +626,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .events__main {
+  position: relative;
   background-color: #F9F9F9;
   min-height: 390px;
   min-width: 0;
-}
-
-.events__slider {
-  height: 350px;
-  margin-bottom: 30px;
 }
 
 .events-names__item {
@@ -700,19 +696,11 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 31px;
 }
 
-.slider-events {
+.slider_1 {
   position: absolute;
-  max-width: 1471px;
-  max-height: 350px;
-  overflow: hidden;
-  background-color: #F9F9F9;
-}
-
-.slider-events__gallery {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  height: 100%;
+  top: 0;
+  left: 0;
+  max-width: 1440px;
 }
 
 .slider-events__photo {
@@ -729,23 +717,42 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-top: 30px;
 }
 
+.slider-events__item {
+  width: 359px;
+}
+
+/*
+.slider-events {
+  position: absolute;
+  max-width: 1471px;
+  max-height: 350px;
+  overflow: hidden;
+  background-color: #F9F9F9;
+  &__gallery {
+    display: inline-flex;
+    height: 100%;
+  }
+  &__item {
+    
+    // min-width: 359px;
+  }
+  &__photo {
+    width: 359px;
+    height: 295px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.15);
+  }
+  &__events-names {
+    margin-top: 30px;
+  }
+}
+
 .btns {
   margin: 20px 0px 0px 100px;
 }
 
-.slider_1 {
-  width: 100%;
-}
-
-.slider_1-slide {
-  min-width: 359px;
-}
-
-#events__swiper {
-  position: absolute;
-  margin: 0 auto;
-}
-
+*/
 .our-places__title {
   margin-top: 114px;
   margin-bottom: 44px;
@@ -965,7 +972,7 @@ input[type="search"]::-webkit-search-results-decoration {
   line-height: 150%;
 }
 
-.footer {
+.footer__main {
   background-color: #2D2D2D;
 }
 
@@ -1011,14 +1018,41 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 42px;
 }
 
-.footer__footer {
+.footer__additional {
   background-color: #262626;
+}
+
+.footer__additional-part-1, .footer__additional-part-2 {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  color: #FFFFFF;
+  opacity: 0.5;
+  line-height: 150%;
+}
+
+.additional {
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+.additional__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.part-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.part-2__policy {
+  margin-right: 40px;
 }
 
 .call {

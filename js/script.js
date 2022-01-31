@@ -79,31 +79,19 @@ function fillMainSection(index, direction) {
 //-----------------Events Swiper--------------------//
 
 
-const slider_1 = new Swiper('.slider_1nt', {
-  // Optional parameters
+const slider_1 = new Swiper('.slider_1', {
   direction: 'horizontal',
   loop: false,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
   },
   spaceBetween: 30,
-  slidesPerView: 4,
-  // watchSlidesProgress: true,
-  // initialSlide: 1
+  slidesPerView: 3,
 });
 
 eventsNext.addEventListener('click', () => {
@@ -117,22 +105,12 @@ eventsPrev.addEventListener('click', () => {
 //----------------last report-----------------//
 
 const slider_2 = new Swiper('.slider_2', {
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  
-  // spaceBetween: 30,
   slidesPerView: 3,
 });
 
