@@ -634,16 +634,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .slider_1 {
   position: absolute;
-  // overflow: hidden;
   top: 0;
   left: 0;
-  max-width: 1440px;
-  // margin-left: 0 auto;
-  // padding-left: 500px;
-  
-  // &-wrapper {
-  //   width: 800px;
-  // }
+  width: 1440px;
 }
 
 .slider-events {
@@ -661,6 +654,11 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 359px;
   }
 }
+
+.swiper-slide {
+  flex-shrink: 1 !important;
+}
+
 
 
 /*
