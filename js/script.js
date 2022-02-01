@@ -89,6 +89,8 @@ const slider_1 = new Swiper('.slider_1', {
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
+    dragSize: 74,
+    dragClass: 'slider_1__scrollbar-drag'
   },
   spaceBetween: 30,
   slidesPerView: 3,
@@ -102,15 +104,18 @@ eventsPrev.addEventListener('click', () => {
   slider_1.slidePrev(1000)
 })
 
+
+
 //----------------last report-----------------//
 
 const slider_2 = new Swiper('.slider_2', {
   direction: 'horizontal',
-  loop: true,
+  loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  spaceBetween: 30,
   slidesPerView: 3,
 });
 
@@ -123,3 +128,4 @@ lastReportsPrev.addEventListener('click', () => {
   console.log('prev')
   slider_2.slidePrev(1000)
 })
+
