@@ -197,11 +197,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 .main-page {
-  // background-color: rgb(58, 75, 60); //удалить!
-  // display: flex;
   position: relative;
 }
-//////////////////////
 
 ._container {
   max-width: 1160px;
@@ -218,14 +215,22 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 40px;
 }
 
-.content-wrapper {
-  padding-left: 100px;
+// .content-wrapper {
+//   padding-left: 100px;
+// }
+
+
+//Сдвиг на 100px для aside
+
+section,
+footer {
+  margin-left: -100px;
 }
 
 //------------top-page-----------
 .top-page {
   position: relative;
-  margin-left: -100px;
+  // margin-left: -100px;
 }
 
 .bg-picture {
@@ -254,14 +259,14 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 8px;
   }
   &__bird-logo {
-    margin-left: 54px;
+    margin-left: 58px;
     padding-top: 15px;
   }
   &__birds-and-bees-logo {
     position: absolute;
     display: flex;
     justify-content: center;
-    left: (470 / 1140) * 100%;
+    left: 45.6%;
     & img {
       width: 201px;
       height: 56px;
@@ -277,7 +282,6 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 9px;
   }
   &__book-btn {
-    // margin-left: (45 / 1140) * 100%;
     padding-top: 6px;
   }
 }
@@ -301,42 +305,42 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-top: 40px;
   }
   &__menu {
-    margin-top: 40px;
+    margin-top: 38px;
+    padding-left: 2px;
   }
-    // &_active {
-  //   opacity: 1;
-  //   transition-duration: 0.5s;
-  // }
-  // &_inactive {
-  //   opacity: 0;
-  // }
-  
   &__title {
     margin: {
-      top: 150px;
+      top: 148px;
       bottom: 23px;
     }
+    padding-left: 2px;
   }
   &__subtitle {
     margin-bottom: 45px;
   }
   &__shedule {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
   &__book-and-more-btns {
     display: flex;
-    margin-bottom: 35px;
+    margin-bottom: 41px;
+    padding-left: 2px;
   }
   &__book-btn_fill {
     margin-right: 30px;
   }
   &__nav-btns {
-    margin-bottom: 200px;
+    margin-bottom: 205px;
+    padding-left: 3px;
   }
 }
 .phones {
   &__main-phone {
     margin-bottom: 8px;
+    padding-left: 5px;
+  }
+  &__additional-phone {
+    padding-left: 5px;
   }
 }
 .main-phone {
@@ -462,7 +466,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__prev {
     padding: 10px 8px 8px 12px;
-    margin-right: 20px;
+    margin-right: 16px;
   }
   &__next {
     padding: 10px 12px 8px 8px;
@@ -473,15 +477,19 @@ input[type="search"]::-webkit-search-results-decoration {
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
+    padding-left: 2px;
   }
-  &__item:not(:last-child) {
-    margin-right: 30px;
-  }
+  // &__item:not(:last-child) {
+  //   margin-right: 23px;
+  // }
   &__item {
     opacity: 0.5;
     &:hover {
       opacity: 1;
       cursor: pointer;
+    }
+    &-active {
+      opacity: 1;
     }
   }
   &__title {
@@ -497,12 +505,17 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__underline {
    display: block; 
+   width: 155px;
   }
   &__item_color {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    &:nth-child(4),
+    &:nth-child(5) {
+      padding-bottom: 9px;
+    }
   }
  }
 
@@ -510,6 +523,7 @@ input[type="search"]::-webkit-search-results-decoration {
  .aside {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100px;
     height: 100%;
     position: fixed;
@@ -534,17 +548,15 @@ input[type="search"]::-webkit-search-results-decoration {
 .outer-links {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
-  height: 100vh;
-  // position: relative;
-  // bottom: 30px;
-  // padding-top: 20px;
+  &__item {
+    cursor: pointer;
+  }
   &__item:not(:last-child) {
     margin-bottom: 35px;
   }
   &__item:last-child {
-    padding-bottom: 15px;
+    padding-bottom: 87px;
   }
 }
 
@@ -560,7 +572,7 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow: hidden;
   background: #F9F9F9;
   position: relative;
-  margin-left: -100px;
+  // margin-left: -100px;
   &__header {
     display: flex;
     padding-top: 74px;
@@ -640,12 +652,12 @@ input[type="search"]::-webkit-search-results-decoration {
   left: 0;
   width: 100%;
   height: 388px;
-  &__swiper-scrollbar {
-    height: 4px !important;
+  &__swiper-scrollbar.swiper-scrollbar {
+    height: 4px ;
     position: relative;
     max-width: 1440px;
-    left: 0 !important;
-    width: 100% !important;
+    left: 0 ;
+    width: 100% ;
   }
   &__scrollbar-drag {
     width: 74px;
@@ -1014,6 +1026,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .call {
   display: flex;
   margin-top: 34px;
+  cursor: pointer;
   &__pic {
     width: 13px;
     margin-right: 13px;
@@ -1034,6 +1047,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 103px;
   &__item {
     color: #ABABAB;
+    cursor: pointer;
   }
 }
 

@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Birds and bees</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,600,700" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     <aside class="aside">
       <nav class="aside__nav">
         <ul class="aside__list">
@@ -48,7 +48,7 @@
         <img class="outer-links__item" src="img/aside/facebook-logo.svg" alt="facebook-logo">
       </div>
     </aside>
-    <div class="content-wrapper">
+    <!-- <div class="content-wrapper"> -->
       <section class="top-page">
         <img class="bg-picture" src="img/restaurant.jpg" alt="restaurant">
         <header class="header__header header">
@@ -137,7 +137,7 @@
          
         </header>
 
-        <section class="main-page">
+        <div class="main-page">
           <div class="_container">
 
             <h1 class="main-page__title chapter-title">
@@ -178,7 +178,7 @@
             </div>
             <nav class="main-page__divisions divisions">
               <ul class="divisions__list">
-                <li class="divisions__item">
+                <li class="divisions__item divisions__item-active">
                   <img src="img/divisions/01.svg" alt="01">
                   <p class="divisions__title">Ресторан</p>
                   <img class="divisions__underline" src="img/divisions/underline.svg" alt="underline">
@@ -211,7 +211,7 @@
               </ul>
             </nav>
           </div>
-        </section>
+        </div>
       </section>
 
       <section class="events">
@@ -437,12 +437,12 @@
           <div class="last-reports__header">
             <h2 class="last-reports__title">Последние фотоотчеты</h2>
             <div class="last-reports__nav-btns">
-              <button class="nav-btns__prev last-reports__prev">
+              <!-- <button class="nav-btns__prev last-reports__prev">
                 <img src="img/prev-black.svg" alt="prev">
               </button>
               <button class="nav-btns__next last-reports__next">
                 <img src="img/next-black.svg" alt="next">
-              </button>
+              </button> -->
               <button class="last-reports__all-reports-btn all-reports-btn">Все фотоотчеты</button>
             </div>
             
@@ -470,13 +470,13 @@
                       Праздник Дня Победы
                     </div>
                   </div>
-                  <div class="report-item__item swiper-slide">
+                  <!-- <div class="report-item__item swiper-slide">
                     <img class="report-item__photo" src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="3">
                     <div class="report-item__date">1 июня</div>
                     <div class="report-item__title">
                       Свадьба Ивановых
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -536,8 +536,8 @@
             </div>
           </div>
       </footer>
-    </div>
-  </div>
+    <!-- </div> content-wrapper -->
+  <!-- </div> wrapper -->
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <!-- <script src="js/slider.js"></script> -->
   <script src="js/script.js"></script>
