@@ -443,7 +443,9 @@
               <button class="nav-btns__next last-reports__next">
                 <img src="img/next-black.svg" alt="next">
               </button> -->
-              <button class="last-reports__all-reports-btn all-reports-btn">Все фотоотчеты</button>
+              <div class="last-reports__all-reports-button">
+                <button class="last-reports__all-reports-btn all-reports-btn">Все фотоотчеты</button>
+              </div>
             </div>
             
           </div>
@@ -451,23 +453,29 @@
                 <div class="swiper-wrapper last-reports__swiper-wrapper">
                   <div class="report-item__item swiper-slide">
                     <img class="report-item__photo" src="img/last-reports/1.jpg" alt="1">
-                    <div class="report-item__date">31 мая</div>
-                    <div class="report-item__title">День рождения Софии в стиле<br>
-                      Гарри Поттера!
+                    <div class="report-item__info">
+                      <div class="report-item__date">31 мая</div>
+                      <div class="report-item__title">День рождения Софии в стиле<br>
+                        Гарри Поттера!
+                      </div>  
                     </div>
                   </div>
                   <div class="report-item__item swiper-slide">
                     <img class="report-item__photo" src="img/last-reports/2.jpg" alt="2">
-                    <div class="report-item__date">25 мая</div>
-                    <div class="report-item__title">
-                      Выпускной начальной школы
+                    <div class="report-item__info">
+                      <div class="report-item__date">25 мая</div>
+                      <div class="report-item__title">
+                        Выпускной начальной школы
+                      </div>
                     </div>
                   </div>
                   <div class="report-item__item swiper-slide">
                     <img class="report-item__photo" src="img/last-reports/3.jpg" alt="3">
-                    <div class="report-item__date">9 мая</div>
-                    <div class="report-item__title">
-                      Праздник Дня Победы
+                    <div class="report-item__info">
+                      <div class="report-item__date">9 мая</div>
+                      <div class="report-item__title">
+                        Праздник Дня Победы
+                      </div>
                     </div>
                   </div>
                   <!-- <div class="report-item__item swiper-slide">
@@ -485,40 +493,44 @@
         <div class="footer__main">
           <div class="_container">          
             <div class="footer__content">
-              <div class="footer__col footer__logo">
-                <img src="img/birds-and-bees-logo.png" alt="" srcset="">
-              </div>
-              <div class="footer__col">
-                <button class="book-btn">Забронировать</button>
-                <div class="call">
-                  <div class="call__pic">
-                    <img src="img/phone-receiver.svg" alt="phone">
+              <div class="footer__left">
+                <div class="footer__col footer__logo">
+                  <img src="img/birds-and-bees-logo.png" alt="" srcset="">
+                </div>
+                <div class="footer__col footer__book">
+                  <button class="book-btn">Забронировать</button>
+                  <div class="call">
+                    <div class="call__pic">
+                      <img src="img/phone-receiver.svg" alt="phone">
+                    </div>
+                    <div class="call__text">Заказать звонок</div>
                   </div>
-                  <div class="call__text">Заказать звонок</div>
                 </div>
               </div>
-              <div class="footer__col">
-                <div class="footer__phones phones">
-                  <div class="phones__main-phone main-phone">7 (925) 225-38-38</div>
-                  <div class="phones__additional-phone additional-phone">7 (495) 225-38-38</div>
+              <div class="footer__right">
+                <div class="footer__col">
+                  <div class="footer__phones phones">
+                    <div class="phones__main-phone main-phone">7 (925) 225-38-38</div>
+                    <div class="phones__additional-phone additional-phone">7 (495) 225-38-38</div>
+                  </div>
+                  <div class="footer__outer-links outer-links-hor">
+                    <img class="outer-links-hor__item" src="img/vk-footer.svg" alt="vk-logo">
+                    <img class="outer-links-hor__item" src="img/aside/instagram-logo.svg" alt="instagram-logo">
+                    <img class="outer-links-hor__item" src="img/aside/facebook-logo.svg" alt="facebook-logo">
+                  </div>
                 </div>
-                <div class="footer__outer-links outer-links-hor">
-                  <img class="outer-links-hor__item" src="img/vk-footer.svg" alt="vk-logo">
-                  <img class="outer-links-hor__item" src="img/aside/instagram-logo.svg" alt="instagram-logo">
-                  <img class="outer-links-hor__item" src="img/aside/facebook-logo.svg" alt="facebook-logo">
+                <div class="footer__col footer__subscribe">
+                  <div class="footer__subscribe-text">
+                    Подпишитесь на рассылку Птицы и Пчёлы и будьте в курсе всех новостей и событий
+                  </div>
+                  <div class="footer__email email">
+                    <div class="email__text">E-mail:</div>
+                    <button class="email__subscribe subscribe-btn">
+                      <img src="img/tick.svg" alt="tick">
+                    </button>
+                  </div>
+                  <div class="footer__line"></div>
                 </div>
-              </div>
-              <div class="footer__col footer__subscribe">
-                <div class="footer__subscribe-text">
-                  Подпишитесь на рассылку Птицы и Пчёлы и будьте в курсе всех новостей и событий
-                </div>
-                <div class="footer__email email">
-                  <div class="email__text">E-mail:</div>
-                  <button class="email__subscribe subscribe-btn">
-                    <img src="img/tick.svg" alt="tick">
-                  </button>
-                </div>
-                <div class="footer__line"></div>
               </div>
             </div>
           </div>
