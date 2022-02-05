@@ -108,24 +108,39 @@ eventsPrev.addEventListener('click', () => {
 
 //----------------last report-----------------//
 
-const slider_2 = new Swiper('.slider_2', {
-  direction: 'horizontal',
-  loop: false,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  spaceBetween: 30,
-  slidesPerView: 3,
-});
+// const slider_2 = new Swiper('.slider_2', {
+//   direction: 'horizontal',
+//   loop: false,
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+//   spaceBetween: 30,
+//   slidesPerView: 3,
+// });
 
-lastReportsNext.addEventListener('click', () => {
-  console.log('next')
-  slider_2.slideNext(1000)
+// lastReportsNext.addEventListener('click', () => {
+//   console.log('next')
+//   slider_2.slideNext(1000)
+// })
+
+// lastReportsPrev.addEventListener('click', () => {
+//   console.log('prev')
+//   slider_2.slidePrev(1000)
+// })
+
+//--------------active aside-------------------
+
+const asideItems = document.querySelectorAll('.aside__item')
+asideItems.forEach((el) => {
+  el.addEventListener('mouseover', () => {
+    const image = el.querySelector('.aside__pic')
+    let way = image.getAttribute('src')
+    image.setAttribute('src', way.replace('aside', 'divisions'))
+  })
+  el.addEventListener('mouseout', () => {
+    const image = el.querySelector('.aside__pic')
+    let way = image.getAttribute('src')
+    image.setAttribute('src', way.replace('divisions', 'aside'))
+  })
 })
-
-lastReportsPrev.addEventListener('click', () => {
-  console.log('prev')
-  slider_2.slidePrev(1000)
-})
-

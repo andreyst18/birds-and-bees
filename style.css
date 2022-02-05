@@ -296,15 +296,34 @@ footer {
 }
 
 .book-btn,
-.all-reports-btn {
+.all-reports-btn,
+.more-btn,
+.btn-next,
+.btn-prev,
+.subscribe-btn {
+  color: #fff;
+  border: 2px solid #E3BF77;
+}
+
+.book-btn:hover,
+.all-reports-btn:hover,
+.more-btn:hover,
+.btn-next:hover,
+.btn-prev:hover,
+.subscribe-btn:hover {
+  background-color: #E3BF77;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+
+.book-btn,
+.all-reports-btn,
+.more-btn {
   padding: 11px 28px 11px;
+  border-radius: 63px;
   font-family: 'Montserrat';
   font-size: 14px;
   font-weight: 600;
-  line-height: 121%;
-  color: #fff;
-  border: 2px solid #E3BF77;
-  border-radius: 63px;
 }
 
 .main-page {
@@ -552,6 +571,12 @@ footer {
 
 .divisions__item_color:nth-child(4), .divisions__item_color:nth-child(5) {
   padding-bottom: 9px;
+}
+
+.divisions__item_color:hover {
+  background-color: #E3BF77;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .aside {
@@ -1206,5 +1231,11 @@ footer {
   border-radius: 50%;
   width: 38px;
   height: 38px;
+}
+
+.active-btn {
+  background-color: #E3BF77;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 /*# sourceMappingURL=style.css.map */
