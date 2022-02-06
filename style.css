@@ -413,7 +413,14 @@ footer {
   font-size: 14px;
   font-weight: 600;
   color: #fff;
+  opacity: 0.75;
   line-height: 122%;
+}
+
+.menu__link a:hover {
+  opacity: 1;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
 }
 
 .menu__point {
@@ -530,7 +537,6 @@ footer {
 }
 
 .divisions__item:hover {
-  opacity: 1;
   cursor: pointer;
 }
 
@@ -577,6 +583,10 @@ footer {
   background-color: #E3BF77;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.divisions__pic {
+  height: 34px;
 }
 
 .aside {

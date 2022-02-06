@@ -63,7 +63,11 @@ function fillMainSection(index, direction) {
   } else if ((index < places.length - 1) && direction) {
     index++
   }
-  
+  getDataForFilling(index)
+  return index    
+}
+
+function getDataForFilling(index) {
   mainPageTitle.innerHTML = places[index].title
   mainPageSubTitle.innerHTML = places[index].subtitle
   sheduleDaysFirst.innerHTML = places[index].sheduleFirstPart.sheduleDays
@@ -71,9 +75,6 @@ function fillMainSection(index, direction) {
   sheduleDaysSecond.innerHTML = places[index].sheduleSecondPart.sheduleDays
   sheduleTimeSecond.innerHTML = places[index].sheduleSecondPart.sheduleTime
   mainBackground.setAttribute('src', places[index].picture)
-  
-        
-  return index    
 }
 
 //-----------------Events Swiper--------------------//
@@ -144,3 +145,50 @@ asideItems.forEach((el) => {
     image.setAttribute('src', way.replace('divisions', 'aside'))
   })
 })
+
+//--------------main page menu---------------//
+const placeName = document.querySelector('.chapter-title')
+const mainMenu = document.querySelectorAll('.divisions__item')
+
+let currentItem = getCurrentPlace()
+  
+mainMenu.forEach((el) => {
+  el.addEventListener('mouseover', () => {
+    if (el !== currentItem) {
+      currentItem.classList.remove('divisions__item-active')
+    }
+    el.classList.add('divisions__item-active')
+  })
+  el.addEventListener('mouseout', () => {
+    currentItem.classList.add('divisions__item-active')    
+    if (el !== currentItem) {
+      el.classList.remove('divisions__item-active')
+    }
+  })
+
+  el.addEventListener('click', () => {
+    const targetPlace = el.querySelector('.divisions__title').innerHTML
+    // console.log(targetPlace)
+    fillMainSectionByName(targetPlace)
+    currentItem = getCurrentPlace()
+    el.classList.add('divisions__item-active')
+  })
+})
+
+function fillMainSectionByName(targetPlace) {
+  console.log(places)
+  for (let i = 0; i < places.length; i++) {
+    if (targetPlace === places[i].title) {
+      getDataForFilling(i)
+    }
+  }
+}
+
+function getCurrentPlace() {
+  for (let i = 0; i < mainMenu.length; i++) {
+    if (mainMenu[i].querySelector('.divisions__title').innerHTML === placeName.innerHTML) {
+      mainMenu[i].classList.add('divisions__item-active')
+      return mainMenu[i]
+    }
+  }
+}

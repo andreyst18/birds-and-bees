@@ -389,7 +389,12 @@ footer {
       weight: 600
     }
     color: #fff;
+    opacity: 0.75;
     line-height: 122%;
+    &:hover {
+      opacity: 1;
+      transition: opacity 0.1s;
+    }
     
   }
   &__point {
@@ -497,7 +502,6 @@ footer {
   &__item {
     opacity: 0.5;
     &:hover {
-      opacity: 1;
       cursor: pointer;
     }
     &-active {
@@ -532,6 +536,9 @@ footer {
       background-color: #E3BF77;
       transition: 0.4s;
     }
+  }
+  &__pic {
+    height: 34px;
   }
  }
 
