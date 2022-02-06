@@ -43,9 +43,10 @@ const eventsNext = document.querySelector('.events__next'),
       lastReportsPrev = document.querySelector('.last-reports__prev')
 
 const asideItems = document.querySelectorAll('.aside__item')
+const asidePanel = document.querySelector('.aside')
+const asideTitle = document.querySelectorAll('.aside__title')
 const placeName = document.querySelector('.chapter-title')
 const mainMenu = document.querySelectorAll('.divisions__item')
-const asideMenu = document.querySelectorAll('.aside__item')
 
 let currentPlace = 0
 let isNextMainPlace
@@ -128,40 +129,74 @@ eventsPrev.addEventListener('click', () => {
 
 //----------------last report-----------------//
 
-// const slider_2 = new Swiper('.slider_2', {
-//   direction: 'horizontal',
-//   loop: false,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   spaceBetween: 30,
-//   slidesPerView: 3,
-// });
+/*
+const slider_2 = new Swiper('.slider_2', {
+  direction: 'horizontal',
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  spaceBetween: 30,
+  slidesPerView: 3,
+});
 
-// lastReportsNext.addEventListener('click', () => {
-//   console.log('next')
-//   slider_2.slideNext(1000)
-// })
+lastReportsNext.addEventListener('click', () => {
+  console.log('next')
+  slider_2.slideNext(1000)
+})
 
-// lastReportsPrev.addEventListener('click', () => {
-//   console.log('prev')
-//   slider_2.slidePrev(1000)
-// })
+lastReportsPrev.addEventListener('click', () => {
+  console.log('prev')
+  slider_2.slidePrev(1000)
+})
+*/
 
 //--------------active aside-------------------
 
 
 asideItems.forEach((el) => {
   el.addEventListener('mouseover', () => {
-    const image = el.querySelector('.aside__pic')
+    const image = el.querySelector('.pic-aside__img')
     let way = image.getAttribute('src')
     image.setAttribute('src', way.replace('aside', 'divisions'))
   })
   el.addEventListener('mouseout', () => {
-    const image = el.querySelector('.aside__pic')
+    const image = el.querySelector('.pic-aside__img')
     let way = image.getAttribute('src')
     image.setAttribute('src', way.replace('divisions', 'aside'))
+  })
+  el.addEventListener('click', () => {
+    let placeIndex,
+        targetPlace
+    const asidePic = el.querySelector('.aside__pic')
+    placeIndex = asidePic.src[asidePic.src.length - 5]
+    switch(placeIndex) {
+      case '1': targetPlace = 'Ресторан'
+        break
+      case '2': targetPlace = 'Караоке-бар'
+        break
+      case '3': targetPlace = 'Детский клуб'
+        break
+      case '4': targetPlace = 'Веревочный парк'
+        break
+      case '5': targetPlace = 'Бассейн'
+        break
+      case '6': targetPlace = 'Отель'
+        break
+    }
+    fillMainSectionByName(targetPlace)
+    removeActiveItem()
+    currentItem = getCurrentPlace()
+  })
+})
+
+asidePanel.addEventListener('mouseover', () => {
+  asidePanel.classList.add('aside-active')
+  asideTitle.forEach( el => {
+    setTimeout(() => {
+      el.classList.add('aside__title-active')  
+    }, 200);
   })
 })
 
@@ -200,10 +235,6 @@ function fillMainSectionByName(targetPlace) {
 }
 
 function getCurrentPlace() {
-  // const prevCurrentPlace = mainMenu.forEach(el => {
-  //   if (el.classList.contains('divisions__item-active')) { return el }
-  // })
-  // console.log(prevCurrentPlace)
   for (let i = 0; i < mainMenu.length; i++) {
     if (mainMenu[i].querySelector('.divisions__title').innerHTML === placeName.innerHTML) {
       // prevCurrentPlace.classList.remove('divisions__item-active')

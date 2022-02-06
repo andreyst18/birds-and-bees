@@ -496,9 +496,6 @@ footer {
     padding-bottom: 70px;
     padding-left: 2px;
   }
-  // &__item:not(:last-child) {
-  //   margin-right: 23px;
-  // }
   &__item {
     opacity: 0.5;
     &:hover {
@@ -524,9 +521,8 @@ footer {
    width: 155px;
   }
   &__item_color {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     &:nth-child(4),
     &:nth-child(5) {
@@ -536,6 +532,9 @@ footer {
       background-color: #E3BF77;
       transition: 0.4s;
     }
+    // &>.aside__title-active {
+    //   color: #fff;
+    // }
   }
   &__pic {
     height: 34px;
@@ -556,10 +555,17 @@ footer {
     &__item {
       height: 102px;
       position: relative;
+      &-active {
+
+      }
     }
     &__line {
       position: absolute;
       bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+      opacity: 0.03;
     }
     &__nav {
       margin-bottom: 15px;
@@ -567,7 +573,43 @@ footer {
     &__item:hover {
       cursor: pointer;
     }
+    &__item .aside__title:hover {
+      color: #fff;
+    }
+    &__main {
+      position: relative;
+      display: flex;
+      // top: 36px;
+      left: 27px;
+      align-items: center;
+    }
+    &__title {
+      display: none;
+      font: {
+        family: 'Montserrat';
+        size: 16px;
+        weight: 600
+      }
+      color: #2D2D2D;
+      margin-left: 25px;
+      &-active {
+        display: block;
+      }
+    }
+    &-active {
+      width: 300px;
+      transition: width 0.5s;
+    }
+    &__pic {
+      width: 46px;
+    }
 }
+
+.pic-aside {
+  display: flex;
+  justify-content: center;
+}
+
 .outer-links {
   display: flex;
   flex-direction: column;

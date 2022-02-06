@@ -560,16 +560,10 @@ footer {
 }
 
 .divisions__item_color {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -617,6 +611,10 @@ footer {
 .aside__line {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.03;
 }
 
 .aside__nav {
@@ -625,6 +623,53 @@ footer {
 
 .aside__item:hover {
   cursor: pointer;
+}
+
+.aside__item .aside__title:hover {
+  color: #fff;
+}
+
+.aside__main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 27px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aside__title {
+  display: none;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 600;
+  color: #2D2D2D;
+  margin-left: 25px;
+}
+
+.aside__title-active {
+  display: block;
+}
+
+.aside-active {
+  width: 300px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.aside__pic {
+  width: 46px;
+}
+
+.pic-aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .outer-links {
