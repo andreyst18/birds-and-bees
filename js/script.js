@@ -168,9 +168,10 @@ asideItems.forEach((el) => {
     image.setAttribute('src', way.replace('divisions', 'aside'))
   })
   el.addEventListener('click', () => {
+    console.log('Y')
     let placeIndex,
         targetPlace
-    const asidePic = el.querySelector('.aside__pic')
+    const asidePic = el.querySelector('.pic-aside__img')
     placeIndex = asidePic.src[asidePic.src.length - 5]
     switch(placeIndex) {
       case '1': targetPlace = 'Ресторан'
@@ -209,15 +210,15 @@ asidePanel.addEventListener('mouseenter', () => {
     })
 })
 
-asidePanel.addEventListener('mouseleave', () => {
-  asidePanel.classList.remove('aside-active')
-  asideTitle.forEach( el => {
-    el.classList.remove('aside__title-active')
-  })
-  outerLinksTitle.forEach( el => {
-    el.style.display = 'none'
-  })
-})
+// asidePanel.addEventListener('mouseleave', () => {
+//   asidePanel.classList.remove('aside-active')
+//   asideTitle.forEach( el => {
+//     el.classList.remove('aside__title-active')
+//   })
+//   outerLinksTitle.forEach( el => {
+//     el.style.display = 'none'
+//   })
+// })
 
 
 
