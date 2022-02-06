@@ -47,6 +47,7 @@ const asidePanel = document.querySelector('.aside')
 const asideTitle = document.querySelectorAll('.aside__title')
 const placeName = document.querySelector('.chapter-title')
 const mainMenu = document.querySelectorAll('.divisions__item')
+const outerLinksTitle = document.querySelectorAll('.outer-links__title')
 
 let currentPlace = 0
 let isNextMainPlace
@@ -191,14 +192,34 @@ asideItems.forEach((el) => {
   })
 })
 
-asidePanel.addEventListener('mouseover', () => {
+asidePanel.addEventListener('mouseenter', () => {
   asidePanel.classList.add('aside-active')
   asideTitle.forEach( el => {
-    setTimeout(() => {
-      el.classList.add('aside__title-active')  
-    }, 200);
+      setTimeout(() => {
+        el.classList.add('aside__title-active')  
+      }, 200);
+    })
+    asideItems.forEach( el => {
+      el.classList.add('aside__item-active')
+    })
+    outerLinksTitle.forEach( el => {
+      setTimeout(() => {
+        el.style.display = 'block'  
+      }, 200);
+    })
+})
+
+asidePanel.addEventListener('mouseleave', () => {
+  asidePanel.classList.remove('aside-active')
+  asideTitle.forEach( el => {
+    el.classList.remove('aside__title-active')
+  })
+  outerLinksTitle.forEach( el => {
+    el.style.display = 'none'
   })
 })
+
+
 
 //--------------main page menu---------------//
 
