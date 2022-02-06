@@ -42,20 +42,41 @@ const eventsNext = document.querySelector('.events__next'),
       lastReportsNext = document.querySelector('.last-reports__next'),
       lastReportsPrev = document.querySelector('.last-reports__prev')
 
-
+const asideItems = document.querySelectorAll('.aside__item')
+const placeName = document.querySelector('.chapter-title')
+const mainMenu = document.querySelectorAll('.divisions__item')
+const asideMenu = document.querySelectorAll('.aside__item')
 
 let currentPlace = 0
 let isNextMainPlace
+let currentItem = getCurrentPlace() //меню выбора места
+
+
+//--------------------------------------------------------------
 
 prevBtnMain.addEventListener('click', () => { 
   isNextMainPlace = false
-  currentPlace = fillMainSection(currentPlace, isNextMainPlace) 
+  currentPlace = fillMainSection(currentPlace, isNextMainPlace)
+  removeActiveItem()
+  currentItem = getCurrentPlace()
 })
 
 nextBtnMain.addEventListener('click', () => { 
   isNextMainPlace = true
   currentPlace = fillMainSection(currentPlace, isNextMainPlace) 
+  removeActiveItem()
+  currentItem = getCurrentPlace()
 })
+
+function removeActiveItem() {
+  let prevCurrentPlace
+  for (let i = 0; i < mainMenu.length; i++) {
+    if (mainMenu[i].classList.contains('divisions__item-active')) { 
+      prevCurrentPlace = mainMenu[i]
+    }  
+  }
+  prevCurrentPlace.classList.remove('divisions__item-active')
+}
 
 function fillMainSection(index, direction) {
   if (index > 0 && !direction) {
@@ -105,8 +126,6 @@ eventsPrev.addEventListener('click', () => {
   slider_1.slidePrev(1000)
 })
 
-
-
 //----------------last report-----------------//
 
 // const slider_2 = new Swiper('.slider_2', {
@@ -132,7 +151,7 @@ eventsPrev.addEventListener('click', () => {
 
 //--------------active aside-------------------
 
-const asideItems = document.querySelectorAll('.aside__item')
+
 asideItems.forEach((el) => {
   el.addEventListener('mouseover', () => {
     const image = el.querySelector('.aside__pic')
@@ -147,10 +166,7 @@ asideItems.forEach((el) => {
 })
 
 //--------------main page menu---------------//
-const placeName = document.querySelector('.chapter-title')
-const mainMenu = document.querySelectorAll('.divisions__item')
 
-let currentItem = getCurrentPlace()
   
 mainMenu.forEach((el) => {
   el.addEventListener('mouseover', () => {
@@ -176,7 +192,6 @@ mainMenu.forEach((el) => {
 })
 
 function fillMainSectionByName(targetPlace) {
-  console.log(places)
   for (let i = 0; i < places.length; i++) {
     if (targetPlace === places[i].title) {
       getDataForFilling(i)
@@ -185,8 +200,13 @@ function fillMainSectionByName(targetPlace) {
 }
 
 function getCurrentPlace() {
+  // const prevCurrentPlace = mainMenu.forEach(el => {
+  //   if (el.classList.contains('divisions__item-active')) { return el }
+  // })
+  // console.log(prevCurrentPlace)
   for (let i = 0; i < mainMenu.length; i++) {
     if (mainMenu[i].querySelector('.divisions__title').innerHTML === placeName.innerHTML) {
+      // prevCurrentPlace.classList.remove('divisions__item-active')
       mainMenu[i].classList.add('divisions__item-active')
       return mainMenu[i]
     }
