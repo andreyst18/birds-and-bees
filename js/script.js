@@ -210,15 +210,15 @@ asidePanel.addEventListener('mouseenter', () => {
     })
 })
 
-// asidePanel.addEventListener('mouseleave', () => {
-//   asidePanel.classList.remove('aside-active')
-//   asideTitle.forEach( el => {
-//     el.classList.remove('aside__title-active')
-//   })
-//   outerLinksTitle.forEach( el => {
-//     el.style.display = 'none'
-//   })
-// })
+asidePanel.addEventListener('mouseleave', () => {
+  asidePanel.classList.remove('aside-active')
+  asideTitle.forEach( el => {
+    el.classList.remove('aside__title-active')
+  })
+  outerLinksTitle.forEach( el => {
+    el.style.display = 'none'
+  })
+})
 
 
 
@@ -265,3 +265,24 @@ function getCurrentPlace() {
     }
   }
 }
+
+//---------------our-places------------------
+
+///////Передвижение ползунка
+
+const ourPlacesNames = document.querySelectorAll('.filter__item')
+const thumb = document.querySelector('.nav-line__thumb-thin')
+const gap = 37 //px
+const startWidth = ourPlacesNames[0].clientWidth
+ourPlacesNames.forEach(el => {
+  let currentThumbPosition = thumb.getBoundingClientRect().x
+  let targetThumbPosition
+  el.addEventListener('click', () => {
+    console.log(el.clientWidth)
+    targetThumbPosition = el.getBoundingClientRect().x
+    thumb.style.transform = `translateX(${targetThumbPosition - currentThumbPosition}px)`
+    thumb.style.transition = 'transform 0.8s'
+    thumb.style.width = `${el.clientWidth}px`
+    // thumb.style.transition = 'width 0.8s'
+  })
+})

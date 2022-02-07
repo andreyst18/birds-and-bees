@@ -605,12 +605,18 @@ footer {
   justify-content: center;
 }
 
+.pth  {
+  fill: red;
+}
+
+
 .outer-links {
   position: relative;
   display: flex;
   flex-direction: column;
-  &__item {
+  &__item svg .pth {
     cursor: pointer;
+    fill: red;
   }
   &__title {
     display: none;
@@ -621,11 +627,15 @@ footer {
     }
     color: #ABABAB;
     margin-left: 37px;
+    &:hover {
+      color: #000;
+    }
   }
   &__row {
     display: flex;
     align-items: center;
     margin-bottom: 35px;
+    height: 18px;
     &:last-child {
       margin-bottom: 55px;
     }
@@ -696,8 +706,8 @@ footer {
   max-width: 1140px;
   position: relative;
   &__line {
-    background-color: #000;
-    opacity: 0.06;
+    background-color: rgba($color: #000, $alpha: 0.06);
+    // opacity: 0.06;
     border-radius: 7px;
     height: 4px;
     position: relative;
@@ -832,6 +842,9 @@ footer {
     opacity: 0.5;
     line-height: 122%;
     margin-right: 37px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__nav-line {
     position: relative;
@@ -1177,6 +1190,10 @@ footer {
     color: #FFFFFF;
     opacity: 0.5;
     line-height: 129%;
+  }
+  &__input {
+    background-color: inherit;
+    color: #fff;
   }
 }
 

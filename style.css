@@ -673,6 +673,10 @@ footer {
           justify-content: center;
 }
 
+.pth {
+  fill: red;
+}
+
 .outer-links {
   position: relative;
   display: -webkit-box;
@@ -684,8 +688,9 @@ footer {
           flex-direction: column;
 }
 
-.outer-links__item {
+.outer-links__item svg .pth {
   cursor: pointer;
+  fill: red;
 }
 
 .outer-links__title {
@@ -697,6 +702,10 @@ footer {
   margin-left: 37px;
 }
 
+.outer-links__title:hover {
+  color: #000;
+}
+
 .outer-links__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -705,6 +714,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 35px;
+  height: 18px;
 }
 
 .outer-links__row:last-child {
@@ -793,8 +803,7 @@ footer {
 }
 
 .nav-line__line {
-  background-color: #000;
-  opacity: 0.06;
+  background-color: rgba(0, 0, 0, 0.06);
   border-radius: 7px;
   height: 4px;
   position: relative;
@@ -928,6 +937,10 @@ footer {
   opacity: 0.5;
   line-height: 122%;
   margin-right: 37px;
+}
+
+.filter__item:hover {
+  cursor: pointer;
 }
 
 .filter__nav-line {
@@ -1304,6 +1317,11 @@ footer {
   color: #FFFFFF;
   opacity: 0.5;
   line-height: 129%;
+}
+
+.email__input {
+  background-color: inherit;
+  color: #fff;
 }
 
 .subscribe-btn {
