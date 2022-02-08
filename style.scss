@@ -854,14 +854,16 @@ footer {
 .main-places {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -30px;
   &__item {
     width: 550px;
     height: 320px;
     position: relative;
     margin-bottom: 30px;
-    &:nth-child(2n+1) {
-      margin-right: 30px;
-    }
+    margin-right: 30px;
+    // &:nth-child(2n+1) {
+    //   margin-right: 30px;
+    // }
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
     &:last-child {
       margin-bottom: 120px;

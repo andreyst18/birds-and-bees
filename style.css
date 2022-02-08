@@ -953,6 +953,7 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-right: -30px;
 }
 
 .main-places__item {
@@ -960,12 +961,9 @@ footer {
   height: 320px;
   position: relative;
   margin-bottom: 30px;
+  margin-right: 30px;
   -webkit-box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15);
-}
-
-.main-places__item:nth-child(2n+1) {
-  margin-right: 30px;
 }
 
 .main-places__item:last-child {

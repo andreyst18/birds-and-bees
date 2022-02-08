@@ -274,15 +274,43 @@ const ourPlacesNames = document.querySelectorAll('.filter__item')
 const thumb = document.querySelector('.nav-line__thumb-thin')
 const gap = 37 //px
 const startWidth = ourPlacesNames[0].clientWidth
+const ourPlacesCards = document.querySelectorAll('.main-places__item')
+
 ourPlacesNames.forEach(el => {
   let currentThumbPosition = thumb.getBoundingClientRect().x
   let targetThumbPosition
   el.addEventListener('click', () => {
-    console.log(el.clientWidth)
+    const placeName = el.innerHTML
     targetThumbPosition = el.getBoundingClientRect().x
     thumb.style.transform = `translateX(${targetThumbPosition - currentThumbPosition}px)`
     thumb.style.transition = 'transform 0.8s'
-    thumb.style.width = `${el.clientWidth}px`
+    thumb.style.width = `${el.clientWidth}px`  
     // thumb.style.transition = 'width 0.8s'
+
+    ourPlacesCards.forEach( elCard => {
+      elCard.style.display = 'block'
+    })
+    switch (placeName) {
+      case 'Банкетные': hideCard('banquet')
+        break
+      case 'Общие': hideCard('public')
+        break
+      case 'Индивидуальные': hideCard('individual')
+        break
+      case 'Караоке': hideCard('karaoke')
+        break
+    }
+
+    function hideCard(name) {
+      ourPlacesCards.forEach( elCard => {
+        if (!elCard.classList.contains(name)) {
+          elCard.style.display = 'none'
+        }
+      })
+    }
   })
 })
+
+
+
+
