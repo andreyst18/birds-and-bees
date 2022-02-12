@@ -51,11 +51,11 @@ const outerLinksTitle = document.querySelectorAll('.outer-links__title')
 
 let currentPlace = 0
 let isNextMainPlace
-let currentItem = getCurrentPlace() //меню выбора места
+//let currentItem = getCurrentPlace() //меню выбора места
 
 
 //--------------------------------------------------------------
-
+/*
 prevBtnMain.addEventListener('click', () => { 
   isNextMainPlace = false
   currentPlace = fillMainSection(currentPlace, isNextMainPlace)
@@ -69,6 +69,7 @@ nextBtnMain.addEventListener('click', () => {
   removeActiveItem()
   currentItem = getCurrentPlace()
 })
+
 
 function removeActiveItem() {
   let prevCurrentPlace
@@ -100,6 +101,7 @@ function getDataForFilling(index) {
   mainBackground.setAttribute('src', places[index].picture)
 }
 
+*/
 //-----------------Events Swiper--------------------//
 
 
@@ -156,17 +158,18 @@ lastReportsPrev.addEventListener('click', () => {
 //--------------active aside-------------------
 
 
-asideItems.forEach((el) => {
-  el.addEventListener('mouseover', () => {
-    const image = el.querySelector('.pic-aside__img')
-    let way = image.getAttribute('src')
-    image.setAttribute('src', way.replace('aside', 'divisions'))
-  })
-  el.addEventListener('mouseout', () => {
-    const image = el.querySelector('.pic-aside__img')
-    let way = image.getAttribute('src')
-    image.setAttribute('src', way.replace('divisions', 'aside'))
-  })
+// asideItems.forEach((el) => {
+  // el.addEventListener('mouseover', () => {
+  //   const image = el.querySelector('.pic-aside__img')
+  //   let way = image.getAttribute('src')
+  //   image.setAttribute('src', way.replace('aside', 'divisions'))
+  // })
+  // el.addEventListener('mouseout', () => {
+  //   const image = el.querySelector('.pic-aside__img')
+  //   let way = image.getAttribute('src')
+  //   image.setAttribute('src', way.replace('divisions', 'aside'))
+  // })
+  /*
   el.addEventListener('click', () => {
     console.log('Y')
     let placeIndex,
@@ -220,11 +223,11 @@ asidePanel.addEventListener('mouseleave', () => {
   })
 })
 
-
+*/
 
 //--------------main page menu---------------//
 
-  
+  /*
 mainMenu.forEach((el) => {
   el.addEventListener('mouseover', () => {
     if (el !== currentItem) {
@@ -265,6 +268,7 @@ function getCurrentPlace() {
     }
   }
 }
+*/
 
 //---------------our-places------------------
 
@@ -309,6 +313,28 @@ ourPlacesNames.forEach(el => {
       })
     }
   })
+})
+
+//----------SLIDER-TOP----------//
+
+const nextSlideTop = document.querySelector('.nav-btns__next_top-page')
+const prevSlideTop = document.querySelector('.nav-btns__prev_top-page')
+
+const sliderTop = new Swiper('.slider-top', {
+  direction: 'horizontal',
+  loop: false,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  slidesPerView: 1
+})
+
+nextSlideTop.addEventListener('click', () => {
+  sliderTop.slideNext(500)
+}) 
+
+prevSlideTop.addEventListener('click', () => {
+  sliderTop.slidePrev(500)
 })
 
 

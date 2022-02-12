@@ -189,49 +189,94 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-//----------------WRAPPER---------------------
-.wrapper {
-  // overflow: hidden;
-  position: relative;
-}
-
-
-.main-page {
-  position: relative;
-}
+//-----------------GLOBAL-----------------//
 
 ._container {
-  max-width: 1160px;
+  max-width: 1270px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 10px 0 120px;
 }
 @media (max-width: 1380px) {
   ._container {
-    padding: 0px 10px 0px 110px;  
+    padding: 0px 10px 0px 10px;  
   }
 }
 
-.header__header {
-  padding-top: 40px;
-}
+//-----------------TOP-PAGE-----------------//
 
-// .content-wrapper {
-//   padding-left: 100px;
-// }
-
-
-//Сдвиг на 100px для aside
-
-section,
-footer {
-  margin-left: -100px;
-}
-
-//------------top-page-----------
 .top-page {
   position: relative;
-  // margin-left: -100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    margin-top: 40px;
+  }
+  &__book-and-more-btns {
+    position: relative;
+    top: 130px;
+  }
+  &__nav-btns {
+    margin-top: 40px;
+  }
+  &__divisions {
+    margin-bottom: 68px;
+  }
+  &__book-btn_fill {
+    margin-right: 30px;
+  }
 }
+
+.slider-top {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  &__slide {
+    width: 100vw;
+  }
+}
+
+.slide-top {
+  &__content {
+    position: relative;
+    top: 296px;
+  }
+  &__background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__title {
+    margin: {
+      bottom: 23px;
+    }
+    padding-left: 2px;
+  }
+  &__subtitle {
+    margin-bottom: 45px;
+  }
+  &__shedule {
+    margin-bottom: 38px;
+  }
+  
+  &__book-btn_fill {
+    margin-right: 30px;
+  }
+  &__nav-btns {
+    padding-left: 3px;
+  }
+  &__menu {
+    margin-top: 38px;
+  }
+}
+
+
+
+//------------top-page-----------
 
 .bg-picture {
   position: absolute;
@@ -246,7 +291,6 @@ footer {
 
 //----------------HEADER---------------------
 .header {
-  position: relative;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -266,7 +310,7 @@ footer {
     position: absolute;
     display: flex;
     justify-content: center;
-    left: 45.6%;
+    left: 48%;
     & img {
       width: 201px;
       height: 56px;
@@ -278,13 +322,33 @@ footer {
     padding-top: 18px;
   }
   &__basket-logo {
+    position: relative;
     margin-right: 45px;
-    padding-top: 9px;
+    padding-top: 18px;
+  }
+  &__circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 9px;
+    left: 11px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #E3BF77;
+    font: {
+      family: 'Montserrat';
+      size: 10px;
+      weight: 700
+    }
+    color: #fff;
   }
   &__book-btn {
     padding-top: 6px;
   }
 }
+
 .book-btn,
 .all-reports-btn,
 .more-btn,
@@ -311,41 +375,6 @@ footer {
   }
 }
 
-.main-page {
-  position: relative;
-  &__header {
-    padding-top: 40px;
-  }
-  &__menu {
-    margin-top: 38px;
-    padding-left: 2px;
-  }
-  &__title {
-    margin: {
-      top: 148px;
-      bottom: 23px;
-    }
-    padding-left: 2px;
-  }
-  &__subtitle {
-    margin-bottom: 45px;
-  }
-  &__shedule {
-    margin-bottom: 38px;
-  }
-  &__book-and-more-btns {
-    display: flex;
-    margin-bottom: 41px;
-    padding-left: 2px;
-  }
-  &__book-btn_fill {
-    margin-right: 30px;
-  }
-  &__nav-btns {
-    margin-bottom: 205px;
-    padding-left: 3px;
-  }
-}
 .phones {
   &__main-phone {
     margin-bottom: 8px;
@@ -493,11 +522,14 @@ footer {
   &__list {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 70px;
     padding-left: 2px;
+    max-width: 1160px;    
   }
   &__item {
     opacity: 0.5;
+    &:last-child {
+      margin-right: 0;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -538,6 +570,12 @@ footer {
   }
  }
 
+ .basket {
+   fill: white;
+ }
+
+
+
  //--------------ASIDE------------------
  .aside {
     display: flex;
@@ -554,6 +592,13 @@ footer {
       position: relative;
       &-active:hover {
         color: #fff;
+        & .pic-aside__part {
+          fill: #E3BF77;
+        }
+        & path {
+          fill: #fff;
+        }
+        
       }
     }
     &__line {
@@ -603,6 +648,12 @@ footer {
 .pic-aside {
   display: flex;
   justify-content: center;
+  &__svg {
+    fill: #E3BF77;
+  }
+  &__part {
+    fill: #fff;
+  }
 }
 
 .pth  {
@@ -639,6 +690,12 @@ footer {
     &:last-child {
       margin-bottom: 55px;
     }
+
+    &:hover {
+      &__vk-path {
+        fill: red;
+      }
+    }
   }
   &__item-wrapper {
     margin-left: 39px;
@@ -646,6 +703,7 @@ footer {
     display: flex;
     justify-content: center;
   }
+  
 }
 
 .title-h2 {
@@ -772,12 +830,6 @@ footer {
     width: 359px;
   }
 }
-
-.swiper-slide {
-  flex-shrink: 1 !important;
-}
-
-
 
 /*
 .slider-events {
