@@ -320,11 +320,21 @@ ourPlacesNames.forEach(el => {
 const nextSlideTop = document.querySelector('.nav-btns__next_top-page')
 const prevSlideTop = document.querySelector('.nav-btns__prev_top-page')
 
+console.log(mainMenu)
+
 const sliderTop = new Swiper('.slider-top', {
   direction: 'horizontal',
   loop: false,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.divisions__list',
+    type: 'bullets',
+    bulletElement: 'div',
+    bulletClass: 'divisions__item',
+    bulletActiveClass: 'divisions__item-active',
+    clickable: true,
+    renderBullet: function(index) {
+      return `<div class='divisions__item'>${mainMenu[index].innerHTML}</div>`
+    }    
   },
   slidesPerView: 1
 })
@@ -336,6 +346,7 @@ nextSlideTop.addEventListener('click', () => {
 prevSlideTop.addEventListener('click', () => {
   sliderTop.slidePrev(500)
 })
+
 
 
 

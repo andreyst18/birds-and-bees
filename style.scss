@@ -532,6 +532,7 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     &:hover {
       cursor: pointer;
+      opacity: 1;
     }
     &-active {
       opacity: 1;
@@ -1264,3 +1265,4 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: #E3BF77;
   transition: background-color 0.5s;
 }
+

@@ -583,6 +583,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .divisions__item:hover {
   cursor: pointer;
+  opacity: 1;
 }
 
 .divisions__item-active {
