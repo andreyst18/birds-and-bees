@@ -639,7 +639,7 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     &-active {
       width: 300px;
-      transition: width 0.5s;
+      transition: width 0.1s;
     }
     &__pic {
       width: 46px;

@@ -196,34 +196,32 @@ lastReportsPrev.addEventListener('click', () => {
   })
 })
 
+*/
+
 asidePanel.addEventListener('mouseenter', () => {
   asidePanel.classList.add('aside-active')
   asideTitle.forEach( el => {
-      setTimeout(() => {
-        el.classList.add('aside__title-active')  
-      }, 200);
+      el.classList.add('aside__title-active')    
     })
     asideItems.forEach( el => {
       el.classList.add('aside__item-active')
     })
     outerLinksTitle.forEach( el => {
-      setTimeout(() => {
-        el.style.display = 'block'  
-      }, 200);
+      el.style.display = 'block'  
     })
 })
 
 asidePanel.addEventListener('mouseleave', () => {
-  asidePanel.classList.remove('aside-active')
   asideTitle.forEach( el => {
     el.classList.remove('aside__title-active')
   })
+  asidePanel.classList.remove('aside-active')
   outerLinksTitle.forEach( el => {
     el.style.display = 'none'
   })
 })
 
-*/
+
 
 //--------------main page menu---------------//
 
@@ -345,6 +343,13 @@ nextSlideTop.addEventListener('click', () => {
 
 prevSlideTop.addEventListener('click', () => {
   sliderTop.slidePrev(500)
+})
+
+asideItems.forEach( (el, index) => {
+  el.addEventListener('click', () => {
+    console.log(index)
+    sliderTop.slideTo(index)
+  })
 })
 
 
