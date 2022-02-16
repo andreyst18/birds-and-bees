@@ -1043,13 +1043,14 @@ input[type="search"]::-webkit-search-results-decoration {
   &__next {
     margin-right: 30px;
   }
-  &__slider {
+  &__all-reports-button {
+    margin-top: -5px;
+  }
+  &__main {
+    display: flex;
     position: relative;
     margin-top: 47px;
     margin-bottom: 115px;
-  }
-  &__all-reports-button {
-    margin-top: -5px;
   }
 }
 
@@ -1064,6 +1065,13 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .report-item {
+  &__item {
+    position: relative;
+    margin-right: 31px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
   &__photo {
     width: 359px;
     height: 295px;
@@ -1096,11 +1104,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     color: #FFFFFF;
     line-height: 150%;
-  }
-  &__item {
-    // width: 359px;
-    // height: 295px;
-    
   }
 }
 
