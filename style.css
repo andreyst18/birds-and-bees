@@ -651,6 +651,13 @@ input[type="search"]::-webkit-search-results-decoration {
   background: #FFFFFF;
   -webkit-box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
           box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.aside:hover {
+  width: 300px;
+  -webkit-transition: width 0.1s;
+  transition: width 0.1s;
 }
 
 .aside__item {
@@ -658,15 +665,15 @@ input[type="search"]::-webkit-search-results-decoration {
   position: relative;
 }
 
-.aside__item-active:hover {
+.aside__item:hover {
   color: #fff;
 }
 
-.aside__item-active:hover .pic-aside__part {
+.aside__item:hover .pic-aside__part {
   fill: #E3BF77;
 }
 
-.aside__item-active:hover path {
+.aside__item:hover path {
   fill: #fff;
 }
 
@@ -685,6 +692,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .aside__item:hover {
   cursor: pointer;
+  color: #fff;
 }
 
 .aside__main {
@@ -699,12 +707,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .aside__title {
-  display: none;
   font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 600;
-  color: #2D2D2D;
-  margin-left: 25px;
+  margin-left: 27px;
 }
 
 .aside__title-active {
@@ -712,14 +718,10 @@ input[type="search"]::-webkit-search-results-decoration {
   color: inherit;
 }
 
-.aside-active {
-  width: 300px;
-  -webkit-transition: width 0.1s;
-  transition: width 0.1s;
-}
-
 .aside__pic {
   width: 46px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .pic-aside {
@@ -760,12 +762,11 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .outer-links__title {
-  display: none;
   font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 600;
   color: #ABABAB;
-  margin-left: 37px;
+  margin-left: 38px;
 }
 
 .outer-links__title:hover {
@@ -800,6 +801,8 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .title-h2 {
@@ -1285,7 +1288,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .footer__email {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .footer__line {

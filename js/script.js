@@ -196,7 +196,7 @@ lastReportsPrev.addEventListener('click', () => {
   })
 })
 
-*/
+
 
 asidePanel.addEventListener('mouseenter', () => {
   asidePanel.classList.add('aside-active')
@@ -221,7 +221,7 @@ asidePanel.addEventListener('mouseleave', () => {
   })
 })
 
-
+*/
 
 //--------------main page menu---------------//
 
@@ -317,9 +317,6 @@ ourPlacesNames.forEach(el => {
 
 const nextSlideTop = document.querySelector('.nav-btns__next_top-page')
 const prevSlideTop = document.querySelector('.nav-btns__prev_top-page')
-
-console.log(mainMenu)
-
 const sliderTop = new Swiper('.slider-top', {
   direction: 'horizontal',
   loop: false,

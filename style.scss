@@ -588,19 +588,33 @@ input[type="search"]::-webkit-search-results-decoration {
     z-index: 10;
     background: #FFFFFF;
     box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    &:hover {
+      width: 300px;
+      transition: width 0.1s;
+    }
     &__item {
       height: 102px;
       position: relative;
-      &-active:hover {
+      &:hover {
         color: #fff;
         & .pic-aside__part {
           fill: #E3BF77;
         }
         & path {
           fill: #fff;
-        }
-        
+        }  
       }
+      // &-active:hover {
+      //   color: #fff;
+      //   & .pic-aside__part {
+      //     fill: #E3BF77;
+      //   }
+      //   & path {
+      //     fill: #fff;
+      //   }
+        
+      // }
     }
     &__line {
       position: absolute;
@@ -615,6 +629,7 @@ input[type="search"]::-webkit-search-results-decoration {
     }
     &__item:hover {
       cursor: pointer;
+      color: #fff;
     }
     &__main {
       position: relative;
@@ -624,25 +639,26 @@ input[type="search"]::-webkit-search-results-decoration {
       align-items: center;
     }
     &__title {
-      display: none;
+      // display: none;
       font: {
         family: 'Montserrat';
         size: 16px;
         weight: 600
       }
-      color: #2D2D2D;
-      margin-left: 25px;
+      // color: #2D2D2D;
+      margin-left: 27px;
       &-active {
         display: block;
         color: inherit;
       }
     }
-    &-active {
-      width: 300px;
-      transition: width 0.1s;
-    }
+    // &-active {
+    //   width: 300px;
+    //   transition: width 0.1s;
+    // }
     &__pic {
       width: 46px;
+      flex-shrink: 0;
     }
 }
 
@@ -671,14 +687,14 @@ input[type="search"]::-webkit-search-results-decoration {
     fill: red;
   }
   &__title {
-    display: none;
+    // display: none;
     font: {
       family: 'Montserrat';
       size: 16px;
       weight: 600
     }
     color: #ABABAB;
-    margin-left: 37px;
+    margin-left: 38px;
     &:hover {
       color: #000;
     }
@@ -703,6 +719,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 22px;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
   }
   
 }
@@ -1160,7 +1177,7 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
   &__email {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
   &__line {
     width: 100%;
