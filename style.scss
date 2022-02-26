@@ -1177,7 +1177,9 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
   &__email {
-    margin-bottom: 12px;
+    display: flex;
+    justify-content: flex-end;
+    // margin-bottom: 12px;
   }
   &__line {
     width: 100%;
@@ -1253,10 +1255,14 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .email {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-end;
+  // align-items: center;
   &__text {
+    position: absolute;
+    left: 0;
+    top: 30px;
     font: {
       family: Montserrat;
       weight: 400;
@@ -1265,10 +1271,18 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #FFFFFF;
     opacity: 0.5;
     line-height: 129%;
+    &-active {
+      top: 10px;
+      transition: top 0.3s;
+    }
   }
   &__input {
+    padding-top: 30px;
     background-color: inherit;
     color: #fff;
+  }
+  &__subscribe {
+    position: absolute;
   }
 }
 

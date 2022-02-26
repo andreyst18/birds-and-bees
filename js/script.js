@@ -349,6 +349,15 @@ asideItems.forEach( (el, index) => {
   })
 })
 
+//------------------EMAIL-------------//
+
+const emailText = document.querySelector('.email__text')
+emailText.addEventListener('click', () => {
+  console.log('click!')
+  emailText.classList.add('email__text-active')
+})
+
+
 
 
 
