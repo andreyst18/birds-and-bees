@@ -347,6 +347,9 @@ input[type="search"]::-webkit-search-results-decoration {
   &__book-btn {
     padding-top: 6px;
   }
+
+  
+
 }
 
 .book-btn,
@@ -605,16 +608,6 @@ input[type="search"]::-webkit-search-results-decoration {
           fill: #fff;
         }  
       }
-      // &-active:hover {
-      //   color: #fff;
-      //   & .pic-aside__part {
-      //     fill: #E3BF77;
-      //   }
-      //   & path {
-      //     fill: #fff;
-      //   }
-        
-      // }
     }
     &__line {
       position: absolute;
@@ -661,6 +654,180 @@ input[type="search"]::-webkit-search-results-decoration {
       flex-shrink: 0;
     }
 }
+
+.header__container-small,
+.top-page__divisions-small {
+  display: none;
+}
+
+.nav-inactive {
+  opacity: 0.7;
+  background-color: #ABABAB;
+}
+
+//--------------------TOP-PAGE mobile--------------//
+
+@media (max-width: 600px) {
+  
+  ._container {
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  .header {
+    &__line-small {
+      width: 21px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 11px;
+      margin-bottom: 4px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .aside,
+  .header__container,
+  .header__nav,
+  .top-page__divisions {
+    display: none;
+  }
+  
+  .header {
+    &__container-small {
+      position: relative;
+      bottom: 234px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__basket-logo {
+      padding: 0px 11px 0px 0px;
+    }
+    &__circle-small {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 15px;
+      left: 10px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: #E3BF77;
+      font: {
+        family: 'Montserrat';
+        size: 10px;
+        weight: 700
+      }
+      color: #fff;
+      }
+    }
+
+  
+  .header__basket-logo {
+    margin: 0;
+  }
+
+  .slide-top__content {
+    top: 129px;
+  }
+
+  .chapter-title {
+    margin-bottom: 20px;
+    font: {
+      family: 'Montserrat';
+      size: 30px;
+      weight: 700
+    }
+    color: #fff;
+    line-height: 122%;
+  }
+  .chapter-subtitle {
+    margin-bottom: 20px;
+    font: {
+      family: 'Montserrat';
+      size: 14px;
+      weight: 400
+    }
+    color: #fff;
+    line-height: 122%;
+  }
+  .shedule {
+    display: flex;
+    &__days {
+      font: {
+        family: 'Montserrat';
+        size: 12px;
+        weight: 700
+      }
+      color: #fff;
+      line-height: 122%;
+      opacity: 0.5;
+    }
+    &__time {
+      font: {
+        family: 'Montserrat';
+        size: 16px;
+        weight: 400
+      }
+      color: #fff;
+      line-height: 125%;
+    }
+    &__first-part {
+      margin-right: 40px;
+    }
+  }
+
+  .slide-top__shedule {
+    margin-bottom: 0;
+  }
+
+  .top-page__book-and-more-btns {
+    position: static;
+    padding-bottom: 53px;
+  }
+
+  .top-page__book-btn_fill,
+  .top-page__more-btn {
+    width: 100%;
+  }
+
+  .top-page__book-btn_fill {
+    margin-bottom: 20px;
+  }
+  
+  .top-page {
+    justify-content: flex-end;
+  }
+
+  .top-page__nav-btns {
+    margin-top: 30px;
+  }
+
+  .top-page__divisions-small {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 28px;
+  }
+
+  .divisions-small__bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+
+//--------------------TOP-PAGE mobile END--------------//
+
+
 
 .pic-aside {
   display: flex;

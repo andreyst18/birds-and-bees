@@ -335,10 +335,22 @@ const sliderTop = new Swiper('.slider-top', {
 })
 
 nextSlideTop.addEventListener('click', () => {
+  if (sliderTop.activeIndex === mainMenu.length - 2) {
+    nextSlideTop.classList.add('nav-inactive')
+  }
+  if (prevSlideTop.classList.contains('nav-inactive')) {
+    prevSlideTop.classList.remove('nav-inactive')
+  }
   sliderTop.slideNext(500)
 }) 
 
 prevSlideTop.addEventListener('click', () => {
+  if (sliderTop.activeIndex === 1) {
+    prevSlideTop.classList.add('nav-inactive')
+  }
+  if (nextSlideTop.classList.contains('nav-inactive')) {
+    nextSlideTop.classList.remove('nav-inactive')
+  }
   sliderTop.slidePrev(500)
 })
 
