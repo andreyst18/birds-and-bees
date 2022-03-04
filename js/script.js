@@ -334,6 +334,8 @@ const sliderTop = new Swiper('.slider-top', {
   slidesPerView: 1
 })
 
+prevSlideTop.classList.add('nav-inactive')
+
 nextSlideTop.addEventListener('click', () => {
   if (sliderTop.activeIndex === mainMenu.length - 2) {
     nextSlideTop.classList.add('nav-inactive')
@@ -363,11 +365,28 @@ asideItems.forEach( (el, index) => {
 
 //------------------EMAIL-------------//
 
-const emailText = document.querySelector('.email__text')
-emailText.addEventListener('click', () => {
-  console.log('click!')
+const footerEmail = document.querySelector('.footer__email')
+const emailText = document.querySelector('.email__text') 
+const emailInput = document.querySelector('.email__input')
+const emailSubscribe = document.querySelector('.email__subscribe')
+
+emailInput.onfocus = function() {
   emailText.classList.add('email__text-active')
+}
+
+emailInput.onblur = function() {
+  emailText.classList.remove('email__text-active')
+}
+
+emailSubscribe.addEventListener('click', () => {
+  emailInput.value = ''
 })
+  
+
+
+
+
+
 
 
 

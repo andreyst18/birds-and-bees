@@ -592,12 +592,13 @@ input[type="search"]::-webkit-search-results-decoration {
     background: #FFFFFF;
     box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
     overflow: hidden;
+    transition: width 0.2s;
     &:hover {
       width: 300px;
-      transition: width 0.1s;
     }
     &__item {
       height: 102px;
+      width: 300px;
       position: relative;
       &:hover {
         color: #fff;
@@ -670,7 +671,7 @@ input[type="search"]::-webkit-search-results-decoration {
 @media (max-width: 600px) {
   
   ._container {
-    margin: 0 15px;
+    margin: 0 15px;//?
     padding: 0;
   }
 
@@ -697,14 +698,16 @@ input[type="search"]::-webkit-search-results-decoration {
   .header {
     &__container-small {
       position: relative;
-      bottom: 234px;
+      //bottom: 234px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     &__basket-logo {
       padding: 0px 11px 0px 0px;
     }
+
     &__circle-small {
       position: absolute;
       display: flex;
@@ -717,7 +720,7 @@ input[type="search"]::-webkit-search-results-decoration {
       border-radius: 50%;
       background-color: #E3BF77;
       font: {
-        family: 'Montserrat';
+        //family: 'Montserrat';
         size: 10px;
         weight: 700
       }
@@ -731,7 +734,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 
   .slide-top__content {
-    top: 129px;
+    //top: 129px;
   }
 
   .chapter-title {
@@ -1345,7 +1348,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   &__email {
     display: flex;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     // margin-bottom: 12px;
   }
   &__line {
@@ -1423,11 +1426,9 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .email {
   position: relative;
-  display: flex;
-  justify-content: flex-end;
-  // align-items: center;
   &__text {
     position: absolute;
+    z-index: 1;
     left: 0;
     top: 30px;
     font: {
@@ -1439,18 +1440,23 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 0.5;
     line-height: 129%;
     &-active {
-      top: 10px;
-      transition: top 0.3s;
+      transform: translateY(-20px);     
     }
+    transition: transform 0.3s;
   }
   &__input {
+    position: relative;
+    right: 0;
+    z-index: 20;
     padding-top: 30px;
     background-color: inherit;
     color: #fff;
   }
   &__subscribe {
     position: absolute;
+    right: 0;
   }
+  
 }
 
 .subscribe-btn {

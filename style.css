@@ -652,16 +652,17 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
           box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
   overflow: hidden;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 
 .aside:hover {
   width: 300px;
-  -webkit-transition: width 0.1s;
-  transition: width 0.1s;
 }
 
 .aside__item {
   height: 102px;
+  width: 300px;
   position: relative;
 }
 
@@ -757,7 +758,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .header__container-small {
     position: relative;
-    bottom: 234px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -788,16 +788,12 @@ input[type="search"]::-webkit-search-results-decoration {
     height: 17px;
     border-radius: 50%;
     background-color: #E3BF77;
-    font-family: 'Montserrat';
     font-size: 10px;
     font-weight: 700;
     color: #fff;
   }
   .header__basket-logo {
     margin: 0;
-  }
-  .slide-top__content {
-    top: 129px;
   }
   .chapter-title {
     margin-bottom: 20px;
@@ -1446,9 +1442,6 @@ input[type="search"]::-webkit-search-results-decoration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .footer__line {
@@ -1538,16 +1531,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .email {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .email__text {
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 30px;
   font-family: Montserrat;
@@ -1556,15 +1544,21 @@ input[type="search"]::-webkit-search-results-decoration {
   color: #FFFFFF;
   opacity: 0.5;
   line-height: 129%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .email__text-active {
-  top: 10px;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .email__input {
+  position: relative;
+  right: 0;
+  z-index: 20;
   padding-top: 30px;
   background-color: inherit;
   color: #fff;
@@ -1572,6 +1566,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .email__subscribe {
   position: absolute;
+  right: 0;
 }
 
 .subscribe-btn {
