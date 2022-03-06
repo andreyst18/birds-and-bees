@@ -317,6 +317,7 @@ ourPlacesNames.forEach(el => {
 
 const nextSlideTop = document.querySelector('.nav-btns__next_top-page')
 const prevSlideTop = document.querySelector('.nav-btns__prev_top-page')
+const navTopSmall = document.querySelectorAll('.divisions-small__bullet')
 const sliderTop = new Swiper('.slider-top', {
   direction: 'horizontal',
   loop: false,
@@ -344,6 +345,8 @@ nextSlideTop.addEventListener('click', () => {
     prevSlideTop.classList.remove('nav-inactive')
   }
   sliderTop.slideNext(500)
+
+  renderActiveBulletMobile()
 }) 
 
 prevSlideTop.addEventListener('click', () => {
@@ -354,14 +357,44 @@ prevSlideTop.addEventListener('click', () => {
     nextSlideTop.classList.remove('nav-inactive')
   }
   sliderTop.slidePrev(500)
+
+  renderActiveBulletMobile()
 })
+
+function renderActiveBulletMobile() {
+  navTopSmall.forEach( (el, index) => {
+    el.classList.remove('divisions-small__bullet-active')
+    if (index === sliderTop.activeIndex) {
+      el.classList.add('divisions-small__bullet-active')
+    }  
+  })
+}
 
 asideItems.forEach( (el, index) => {
   el.addEventListener('click', () => {
-    console.log(index)
     sliderTop.slideTo(index)
   })
 })
+
+navTopSmall.forEach( (el, index) => {
+  el.addEventListener('click', () => {
+    if (index > 0 && index < mainMenu.length - 1) {
+      nextSlideTop.classList.remove('nav-inactive')
+      prevSlideTop.classList.remove('nav-inactive')
+    } else if (index === 0) {
+      prevSlideTop.classList.add('nav-inactive')
+    } else if (index === mainMenu.length - 1) {
+      nextSlideTop.classList.add('nav-inactive')
+    }
+    navTopSmall.forEach( (el) => {
+      el.classList.remove('divisions-small__bullet-active')  
+    })
+    el.classList.add('divisions-small__bullet-active')
+    sliderTop.slideTo(index)
+  })
+})
+
+
 
 //------------------EMAIL-------------//
 
