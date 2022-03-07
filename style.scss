@@ -709,6 +709,7 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 20px;
     width: 100vw;
     &__line-small {
+      position: relative;
       width: 21px;
       height: 2px;
       background-color: #fff;
@@ -734,7 +735,7 @@ input[type="search"]::-webkit-search-results-decoration {
   .header {
     &__container-small {
       position: relative;
-      //bottom: 234px;
+      z-index: 10;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -898,11 +899,14 @@ input[type="search"]::-webkit-search-results-decoration {
       width: 95vw;
       background: #fff;
     }
-    transition: width 0.2s; 
+    transition: width 0.3s; 
   }
 
   .mobile-menu {
     overflow: hidden;
+    &__menu {
+      margin-top: 68px;
+    }
     &__wrapper {
       margin: 0 15px;
       min-width: 275px;
@@ -947,7 +951,12 @@ input[type="search"]::-webkit-search-results-decoration {
         size: 14px;
         weight: 600
       }
-      
+    }
+  }
+
+  .phones-mobile {
+    &__main-phone {
+      margin-bottom: 7px;
     }
   }
 }

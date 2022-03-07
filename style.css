@@ -775,6 +775,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100vw;
   }
   .header__line-small {
+    position: relative;
     width: 21px;
     height: 2px;
     background-color: #fff;
@@ -795,6 +796,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .header__container-small {
     position: relative;
+    z-index: 10;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -939,8 +941,8 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 0;
     left: 0;
     width: 0;
-    -webkit-transition: width 0.2s;
-    transition: width 0.2s;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
   }
   .top-page__mobile-menu-active {
     visibility: visible;
@@ -951,6 +953,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .mobile-menu {
     overflow: hidden;
+  }
+  .mobile-menu__menu {
+    margin-top: 68px;
   }
   .mobile-menu__wrapper {
     margin: 0 15px;
@@ -994,6 +999,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .menu-mobile__item:first-child {
     margin-top: 20px;
+  }
+  .phones-mobile__main-phone {
+    margin-bottom: 7px;
   }
 }
 

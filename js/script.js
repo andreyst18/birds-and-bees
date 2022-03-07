@@ -420,10 +420,23 @@ emailSubscribe.addEventListener('click', () => {
 const mobileMenuBtn = document.querySelector('.header__nav-small')
 const mobileMenuTop = document.querySelector('.top-page__mobile-menu')
 
+const navLine_1 = document.querySelector('.nav-line-mobile-1')
+const navLine_2 = document.querySelector('.nav-line-mobile-2')
+const navLine_3 = document.querySelector('.nav-line-mobile-3')
+
 mobileMenuBtn.addEventListener('click', () => {
-  console.log('click!')
   mobileMenuTop.classList.add('top-page__mobile-menu-active')
+  navLine_2.style.display = 'none'
+  navLine_1.style.background = '#E3BF77'
+  navLine_3.style.background = '#E3BF77'
+  navLine_1.style.transform = 'rotate(45deg)'
+  navLine_1.style.top = '6px'
+  navLine_3.style.transform = 'rotate(-45deg)'
 })
+
+
+
+
 
 
   
