@@ -414,6 +414,18 @@ emailInput.onblur = function() {
 emailSubscribe.addEventListener('click', () => {
   emailInput.value = ''
 })
+
+//---------------MOBILE MENU----------------//
+
+const mobileMenuBtn = document.querySelector('.header__nav-small')
+const mobileMenuTop = document.querySelector('.top-page__mobile-menu')
+
+mobileMenuBtn.addEventListener('click', () => {
+  console.log('click!')
+  mobileMenuTop.classList.add('top-page__mobile-menu-active')
+})
+
+
   
 
 

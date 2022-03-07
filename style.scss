@@ -395,6 +395,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   color: #fff;
   line-height: 121%;
+  &-mobile {
+    color: #2D2D2D;
+  }
 }
 .additional-phone {
   font: {
@@ -404,6 +407,9 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   color: #fff;
   line-height: 122%;
+  &-mobile {
+    color: #2D2D2D;
+  }
 }
 .menu {
   // padding-left: 440px;
@@ -675,6 +681,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.top-page__mobile-menu {
+  display: none;
+}
+
 //--------------------TOP-PAGE mobile--------------//
 
 @media (max-width: 600px) {
@@ -872,6 +882,73 @@ input[type="search"]::-webkit-search-results-decoration {
   .nav-inactive:focus {
     opacity: 0.7;
     background-color: #ABABAB;
+  }
+
+  .top-page__mobile-menu {
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    &-active {
+      visibility: visible;
+      z-index: 1;
+      height: 100vh;
+      width: 95vw;
+      background: #fff;
+    }
+    transition: width 0.2s; 
+  }
+
+  .mobile-menu {
+    overflow: hidden;
+    &__wrapper {
+      margin: 0 15px;
+      min-width: 275px;
+    }
+    &__line {
+      width: 100%;
+      height: 1px;
+      background-color: #2D2D2D;
+      opacity: 0.1;
+      margin-bottom: 20px;
+    }
+    &__phones {
+      margin-bottom: 20px;
+    }
+    &__book-btn {
+      margin-bottom: 20px;
+    }
+    &__footer {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .book-btn-mobile {
+    color: #2D2D2D;
+    &:active {
+      background: #E3BF77;
+    }
+  }
+
+  .menu-mobile {
+    &__item {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 21px;
+      }
+      &:first-child {
+        margin-top: 20px;
+      }
+      font: {
+        family: 'Montserrat';
+        size: 14px;
+        weight: 600
+      }
+      
+    }
   }
 }
 
