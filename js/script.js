@@ -417,7 +417,7 @@ emailSubscribe.addEventListener('click', () => {
 
 //---------------MOBILE MENU----------------//
 
-const mobileMenuBtn = document.querySelector('.header__nav-small')
+const mobileMenuBtn = document.querySelector('.header__nav-small-inactive')
 const mobileMenuTop = document.querySelector('.top-page__mobile-menu')
 
 const navLine_1 = document.querySelector('.nav-line-mobile-1')
@@ -425,13 +425,17 @@ const navLine_2 = document.querySelector('.nav-line-mobile-2')
 const navLine_3 = document.querySelector('.nav-line-mobile-3')
 
 mobileMenuBtn.addEventListener('click', () => {
-  mobileMenuTop.classList.add('top-page__mobile-menu-active')
-  navLine_2.style.display = 'none'
-  navLine_1.style.background = '#E3BF77'
-  navLine_3.style.background = '#E3BF77'
-  navLine_1.style.transform = 'rotate(45deg)'
-  navLine_1.style.top = '6px'
-  navLine_3.style.transform = 'rotate(-45deg)'
+  if (!mobileMenuTop.classList.contains('top-page__mobile-menu-active')) {
+    mobileMenuTop.classList.add('top-page__mobile-menu-active')
+    navLine_1.classList.add('nav-line-mobile-1-active')
+    navLine_2.classList.add('nav-line-mobile-2-active')
+    navLine_3.classList.add('nav-line-mobile-3-active')
+  } else {
+    mobileMenuTop.classList.remove('top-page__mobile-menu-active')
+    navLine_1.classList.remove('nav-line-mobile-1-active')
+    navLine_2.classList.remove('nav-line-mobile-2-active')
+    navLine_3.classList.remove('nav-line-mobile-3-active')
+  }
 })
 
 
