@@ -108,10 +108,6 @@ function getDataForFilling(index) {
 const slider_1 = new Swiper('.slider_1', {
   direction: 'horizontal',
   loop: false,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
@@ -129,6 +125,46 @@ eventsNext.addEventListener('click', () => {
 eventsPrev.addEventListener('click', () => {
   slider_1.slidePrev(1000)
 })
+
+//-----------------Events Swiper MOBILE--------------------//
+const eventsNextMobile = document.querySelector('.events__next-mobile')
+const eventsPrevMobile = document.querySelector('.events__prev-mobile')
+
+
+const slider_1_mobile = new Swiper('.slider_1-mobile', {
+  direction: 'horizontal',
+  loop: false,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+    dragSize: 74,
+    dragClass: 'slider_1__scrollbar-drag'
+  },
+  spaceBetween: 30,
+  slidesPerView: 1,
+});
+
+eventsNextMobile.addEventListener('click', () => {
+  eventsPrevMobile.classList.remove('nav-inactive')
+  slider_1_mobile.slideNext(1000)
+  if (slider_1_mobile.isEnd) {
+    eventsNextMobile.classList.add('nav-inactive')
+  }
+})
+
+eventsPrevMobile.addEventListener('click', () => {
+  eventsNextMobile.classList.remove('nav-inactive')
+  slider_1_mobile.slidePrev(1000)
+  if (slider_1_mobile.isBeginning) {
+    eventsPrev.classList.add('nav-inactive')
+  }
+})
+
+if (slider_1_mobile.isBeginning) {
+  eventsPrevMobile.classList.add('nav-inactive')
+}
+
+
 
 //----------------last report-----------------//
 
