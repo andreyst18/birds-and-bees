@@ -474,6 +474,16 @@ mobileMenuBtn.addEventListener('click', () => {
   }
 })
 
+//--------------OUR-PLACES-MOBILE------------//
+
+const filterMobileItems = document.querySelectorAll('.filter-mobile__item')
+// ourPlacesCards
+filterMobileItems.forEach( (el, index) => {
+  console.log(el.textContent)
+  console.log(index)
+  
+} )
+
 
 
 
