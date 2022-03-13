@@ -1826,6 +1826,9 @@ input[type="search"]::-webkit-search-results-decoration {
   .main-places__item:last-child {
     margin-bottom: 0;
   }
+  .main-places__item-last-filter {
+    margin-bottom: 0;
+  }
   .main-places__item > img {
     width: 290px;
     -o-object-fit: cover;

@@ -477,12 +477,85 @@ mobileMenuBtn.addEventListener('click', () => {
 //--------------OUR-PLACES-MOBILE------------//
 
 const filterMobileItems = document.querySelectorAll('.filter-mobile__item')
-// ourPlacesCards
+let lastCard
+
 filterMobileItems.forEach( (el, index) => {
-  console.log(el.textContent)
-  console.log(index)
-  
+  if (index === 0) {
+    el.addEventListener('click', () => {
+      ourPlacesCards.forEach( (card) => {
+        card.style.display = 'block'
+        card.classList.remove('main-places__item-last-filter')
+      })
+    })
+  } else if (index === 1) {
+    el.addEventListener('click', () => {
+      ourPlacesCards.forEach( (card) => {
+        card.style.display = 'block'
+      })
+      for (let i = 0; i < ourPlacesCards.length; i++) {
+        if (i !== 0) {
+          ourPlacesCards[i].style.display = 'none'
+        }
+      }
+      setLastCardMarginB(0)
+    })
+  } else if (index === 2) {
+    el.addEventListener('click', () => {
+      ourPlacesCards.forEach( (card) => {
+        card.style.display = 'block'
+      })
+      for (let i = 0; i < ourPlacesCards.length; i++) {
+        if (i !== 2 && i !== 3) {
+          ourPlacesCards[i].style.display = 'none'
+        } 
+      }
+      setLastCardMarginB(3)
+    })
+  } else if (index === 3) {
+    el.addEventListener('click', () => {
+      ourPlacesCards.forEach( (card) => {
+        card.style.display = 'block'
+      })
+      for (let i = 0; i < ourPlacesCards.length; i++) {
+        if (i !== 1 && i !== 4) {
+          ourPlacesCards[i].style.display = 'none'
+        } 
+      }
+      setLastCardMarginB(4)
+    })
+  } else if (index === 4) {
+    el.addEventListener('click', () => {
+      ourPlacesCards.forEach( (card) => {
+        card.style.display = 'block'
+      })
+      for (let i = 0; i < ourPlacesCards.length; i++) {
+        if (i < 5) {
+          ourPlacesCards[i].style.display = 'none'
+        } 
+      }
+    })
+  }
 } )
+
+filterMobileItems.forEach( (el) => {
+  el.addEventListener('click', () => {
+    filterMobileItems.forEach( (el_1) => {
+      if (el_1.classList.contains('filter-mobile__item-active')) {
+        el_1.classList.remove('filter-mobile__item-active')    
+      }
+    })
+    el.classList.add('filter-mobile__item-active')
+  })
+})
+
+function setLastCardMarginB(index) {
+  for (let i = ourPlacesCards.length - 1; i >= 0; i-- ) {
+    if (i === index) {
+      ourPlacesCards[i].classList.add('main-places__item-last-filter')
+      break
+    }
+  }
+}
 
 
 

@@ -1737,6 +1737,9 @@ input[type="search"]::-webkit-search-results-decoration {
       &:last-child {
         margin-bottom: 0;
       }
+      &-last-filter {
+        margin-bottom: 0;
+      }
             
       & > img {
         width: 290px;
