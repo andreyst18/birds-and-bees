@@ -1483,6 +1483,14 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.last-reports__btn-wrapper {
+  display: none;
+}
+
+.additional__content-mobile {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .header__nav-small-inactive {
     position: absolute;
@@ -1911,6 +1919,7 @@ input[type="search"]::-webkit-search-results-decoration {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: 13px;
+    margin-bottom: 0;
   }
   .report-item__photo {
     width: 252px;
@@ -1924,13 +1933,85 @@ input[type="search"]::-webkit-search-results-decoration {
     left: 20px;
     bottom: 28px;
   }
+  .last-reports__btn-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
   .last-reports__all-reports-btn-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 180px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+    padding: 13px 25px 14px 25px;
+  }
+  .footer__content,
+  .footer__left,
+  .footer__right {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__book {
+    margin: 0;
+  }
+  .call {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .phones__main-phone,
+  .phones__additional-phone {
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .footer__right {
+    width: 100%;
+  }
+  .footer__subscribe-text {
+    text-align: center;
+  }
+  .footer__subscribe {
+    padding-bottom: 50px;
+  }
+  .additional__content {
+    display: none;
+  }
+  .additional__content-mobile {
+    display: block;
+  }
+  .additional__part {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    color: #FFFFFF;
+    opacity: 0.5;
+    margin-bottom: 20px;
+  }
+  .additional__part:last-child {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
