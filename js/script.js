@@ -7,6 +7,7 @@ const sheduleTimeFirst = document.querySelector('.shedule__time_first')
 const sheduleDaysSecond = document.querySelector('.shedule__days_second')
 const sheduleTimeSecond = document.querySelector('.shedule__time_second')
 const mainBackground = document.querySelector('.bg-picture')
+const topPage = document.querySelector('.top-page')
 
 const places = [
   {
@@ -466,13 +467,39 @@ mobileMenuBtn.addEventListener('click', () => {
     navLine_1.classList.add('nav-line-mobile-1-active')
     navLine_2.classList.add('nav-line-mobile-2-active')
     navLine_3.classList.add('nav-line-mobile-3-active')
+    document.body.style.overflow = 'hidden'
   } else {
-    mobileMenuTop.classList.remove('top-page__mobile-menu-active')
-    navLine_1.classList.remove('nav-line-mobile-1-active')
-    navLine_2.classList.remove('nav-line-mobile-2-active')
-    navLine_3.classList.remove('nav-line-mobile-3-active')
+    closeMobileMenu()
   }
+
+  topPage.addEventListener('click', (e) => {
+    let current = e.target
+    if (!current.classList.contains('top-page')) {
+      while (!current.classList.contains('top-page')) {
+        if (current.classList.contains('top-page__mobile-menu')) { 
+          console.log('yes')
+          break
+        } else {
+          if (current.parentNode.classList.contains('top-page') && !current.classList.contains('header__nav-small-inactive')) {
+            closeMobileMenu()
+          }
+          current = current.parentNode    
+        }
+      }
+    } else {
+      closeMobileMenu()
+    }
+  })
 })
+
+
+function closeMobileMenu() {
+  mobileMenuTop.classList.remove('top-page__mobile-menu-active')
+  navLine_1.classList.remove('nav-line-mobile-1-active')
+  navLine_2.classList.remove('nav-line-mobile-2-active')
+  navLine_3.classList.remove('nav-line-mobile-3-active')
+  document.body.style.overflow = ''
+}
 
 //--------------OUR-PLACES-MOBILE------------//
 
