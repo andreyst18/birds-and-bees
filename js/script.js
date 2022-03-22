@@ -141,7 +141,7 @@ const slider_1_mobile = new Swiper('.slider_1-mobile', {
     dragSize: 74,
     dragClass: 'slider_1__scrollbar-drag'
   },
-  spaceBetween: 30,
+  spaceBetween: -60,
   slidesPerView: 1,
 });
 
@@ -582,6 +582,35 @@ function setLastCardMarginB(index) {
       break
     }
   }
+}
+
+//-----------------Last reports Swiper MOBILE--------------------//
+
+const slider_2_mobile = new Swiper('.slider_2-mobile', {
+  direction: 'horizontal',
+  loop: false,
+  spaceBetween: -60,
+  slidesPerView: 1,
+});
+
+lastReportsNext.addEventListener('click', () => {
+  lastReportsPrev.classList.remove('nav-inactive')
+  slider_2_mobile.slideNext(1000)
+  if (slider_2_mobile.isEnd) {
+    lastReportsNext.classList.add('nav-inactive')
+  }
+})
+
+lastReportsPrev.addEventListener('click', () => {
+  lastReportsNext.classList.remove('nav-inactive')
+  slider_2_mobile.slidePrev(1000)
+  if (slider_2_mobile.isBeginning) {
+    lastReportsPrev.classList.add('nav-inactive')
+  }
+})
+
+if (slider_2_mobile.isBeginning) {
+  lastReportsPrev.classList.add('nav-inactive')
 }
 
 

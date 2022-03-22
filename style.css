@@ -978,7 +978,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .slider-events__item {
-  width: 359px;
+  width: 207px;
 }
 
 /*
@@ -1487,6 +1487,12 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.slider_2-mobile,
+.last-reports__prev,
+.last-reports__next {
+  display: none;
+}
+
 @media (max-width: 600px) {
   .header__nav-small-inactive {
     position: absolute;
@@ -1785,7 +1791,8 @@ input[type="search"]::-webkit-search-results-decoration {
   .slider_1-mobile {
     display: block;
   }
-  .slider-events__photo {
+  .slider-events__photo,
+  .report-item__photo {
     width: 252px;
     height: 207px;
   }
@@ -1904,9 +1911,20 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .last-reports__header {
     padding-top: 53px;
+    margin-bottom: 13px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .last-reports__all-reports-btn {
     display: none;
+  }
+  .last-reports__next, .last-reports__prev {
+    display: block;
+    height: 38px;
+  }
+  .last-reports__next:active, .last-reports__prev:active {
+    background-color: #E3BF77;
   }
   .last-reports__main {
     display: -webkit-box;
@@ -1917,13 +1935,21 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 13px;
     margin-bottom: 0;
   }
+  .last-reports__nav-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .report-item__photo {
     width: 252px;
     height: 207px;
-    margin-bottom: 10px;
   }
   .report-item__title {
     font-size: 14px;
+    max-width: 200px;
   }
   .report-item__info {
     left: 20px;
@@ -2007,6 +2033,31 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .additional__part:last-child {
     margin-bottom: 0;
+  }
+  .last-reports__title {
+    display: inline-block;
+  }
+  .last-reports__next {
+    margin: 5px 0;
+  }
+  .last-reports__main {
+    display: none;
+  }
+  .slider_2-mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .last-reports__all-reports-button-mobile {
+    display: block;
+  }
+  .all-reports-btn-mobile {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+  .all-reports-btn-mobile:focus {
+    background-color: #E3BF77;
+    color: #fff;
   }
 }
 

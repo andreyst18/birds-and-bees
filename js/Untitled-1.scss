@@ -1,0 +1,350 @@
+
+.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+
+  @media (min-width: 768px) {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 37px;
+  }
+
+  @media (min-width: 1280px) {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 41px;
+  }
+
+  &-50 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.2;
+
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 1280px) {
+      font-weight: 600;
+      font-size: 50px;
+    }
+  }
+
+  &-30 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.3;
+
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 27px;
+    }
+
+    @media (min-width: 1280px) {
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+
+  &-24 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 24px;
+    }
+  }
+
+  &-20 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+
+  &-18 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+.text-p {
+  font-size: 16px;
+  line-height: 22px;
+
+  &-18 {
+    font-size: 18px;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      line-height: 1.5;
+    }
+  }
+
+  &-16 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  &-14 {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  &-12 {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  &--bold {
+    font-weight: 600;
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--grey {
+    color: #9d9c9c;
+  }
+
+  &--green {
+    color: #58b874;
+  }
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--red {
+    color: #ed2828;
+  }
+}
+
+.ui-list {
+  text-align: left;
+
+  li {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 25px;
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #383129;
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+    }
+  }
+
+  &--white {
+    li {
+      color: #fff;
+
+      &:before {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &--orange {
+    li {
+      &:before {
+        background-color: #ff962b;
+      }
+    }
+  }
+}
+
+.text-link {
+  cursor: pointer;
+  text-decoration: underline;
+
+  &--orange {
+    color: #ff962b;
+  }
+
+  @media (min-width: 1280px) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.grey-text {
+  color: #9d9c9c;
+}
+
+.white-text {
+  color: #fff;
+}
+
+.green-text {
+  color: #58b874;
+}
+
+.ui-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.menu-line {
+  position: relative;
+  padding: 12px 20px;
+  line-height: 22px;
+  display: block;
+  cursor: pointer;
+
+  @media only screen and (min-width: 768px) {
+    &:hover {
+      background-color: var(--bg-white);
+    }
+  }
+
+  &--disabled {
+    opacity: 0.75;
+    pointer-events: none;
+  }
+}
+
+.editors-text {
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  font-family: "-apple-system", BlinkMacSystemFont, "Segoe UI", Roboto, "Open Sans",
+  "Arial", sans-serif;
+
+  img {
+    max-width: 100%;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+    @media (min-width: 768px) {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    color: #353535;
+  }
+
+  ol,
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+
+  ol {
+    li {
+      counter-increment: list-0;
+      &:before {
+        content: counter(list-0, decimal) ". ";
+        display: inline-block;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 16px;
+      line-height: 22px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        background: #353535;
+        top: 8px;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  blockquote {
+    background: #f2f2f2;
+    margin: 35px 0;
+    border: 0;
+    border-radius: 8px;
+    padding: 30px 30px 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 140%;
+
+    &:before {
+      content: "Важно!";
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 140%;
+      color: #ff5a19;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.content-card {
+  background: #fff;
+  border: 1px solid #cbc9c9;
+  border-radius: 8px;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    padding: 30px;
+  }
+}
