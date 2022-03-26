@@ -131,6 +131,18 @@ eventsPrev.addEventListener('click', () => {
 const eventsNextMobile = document.querySelector('.events__next-mobile')
 const eventsPrevMobile = document.querySelector('.events__prev-mobile')
 
+// let spaceBetweenSlides = - (document.documentElement.clientWidth - 252 - 30 - 20)
+// // console.log(document.documentElement.clientWidth)
+
+// window.addEventListener('resize', () => {
+//   // console.log(document.documentElement.clientWidth)
+//   spaceBetweenSlides = - (document.documentElement.clientWidth - 252 - 30 - 20)
+//   console.log(spaceBetweenSlides)
+// })
+
+function getSpaceBetweenSlides() {
+  return -1 * (document.documentElement.clientWidth - 252 - 30 - 20)
+}
 
 const slider_1_mobile = new Swiper('.slider_1-mobile', {
   direction: 'horizontal',
@@ -141,7 +153,7 @@ const slider_1_mobile = new Swiper('.slider_1-mobile', {
     dragSize: 74,
     dragClass: 'slider_1__scrollbar-drag'
   },
-  spaceBetween: -60,
+  spaceBetween: getSpaceBetweenSlides(),
   slidesPerView: 1,
 });
 
@@ -444,12 +456,14 @@ emailInput.onfocus = function() {
   emailText.classList.add('email__text-active')
 }
 
-emailInput.onblur = function() {
-  emailText.classList.remove('email__text-active')
+emailInput.onblur = function(e) {
+  
+  // emailText.classList.remove('email__text-active')
 }
 
 emailSubscribe.addEventListener('click', () => {
   emailInput.value = ''
+  emailText.classList.remove('email__text-active')
 })
 
 //---------------MOBILE MENU----------------//
@@ -589,7 +603,7 @@ function setLastCardMarginB(index) {
 const slider_2_mobile = new Swiper('.slider_2-mobile', {
   direction: 'horizontal',
   loop: false,
-  spaceBetween: -60,
+  spaceBetween: getSpaceBetweenSlides(),
   slidesPerView: 1,
 });
 
