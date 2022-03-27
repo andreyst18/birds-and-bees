@@ -2092,6 +2092,10 @@ input[type="search"]::-webkit-search-results-decoration {
   .last-reports {
     padding-left: 0;
   }
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
 }
 
 @media (max-width: 1190px) {
@@ -2117,6 +2121,141 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .header__3d-logo {
     display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .header__book-btn,
+  .header__bird-logo,
+  .header__nav {
+    display: none;
+  }
+  .header__nav-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 50px;
+    padding: 0 100px;
+  }
+  .nav-md__col .menu__link {
+    margin-bottom: 10px;
+  }
+  .footer__content-md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 0;
+  }
+  .footer__content {
+    display: none;
+  }
+  .footer-md__col .footer-md__logo {
+    margin-bottom: 20px;
+  }
+  .our-places__filter {
+    display: none;
+  }
+  .our-places__filter-mobile {
+    display: block;
+  }
+  .last-reports__main {
+    display: none;
+  }
+  .last-reports__header {
+    padding-top: 53px;
+    margin-bottom: 13px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .last-reports__all-reports-btn {
+    display: none;
+  }
+  .last-reports__next, .last-reports__prev {
+    display: block;
+    height: 38px;
+  }
+  .last-reports__next:active, .last-reports__prev:active {
+    background-color: #E3BF77;
+  }
+  .last-reports__nav-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider_2-mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+  .filter-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .filter-mobile__item {
+    margin-right: 5px;
+    margin-bottom: 7px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.5;
+    padding: 5px 10px;
+    border: solid 2px;
+    border-color: #ABABAB;
+    border-radius: 20px;
+  }
+  .filter-mobile__item-active, .filter-mobile__item:active {
+    opacity: 1;
+    color: #fff;
+    background-color: #E3BF77;
+    border-color: #E3BF77;
+  }
+  .our-places__title {
+    margin-top: 60px;
+  }
+  .main-places {
+    margin-right: 0;
+  }
+  .aside:hover {
+    width: 100px;
+  }
+}
+
+@media (min-width: 960px) {
+  .header__book-btn,
+  .header__bird-logo,
+  .header__nav {
+    display: block;
+  }
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .our-places__main {
+    margin-right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

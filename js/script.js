@@ -141,7 +141,12 @@ const eventsPrevMobile = document.querySelector('.events__prev-mobile')
 // })
 
 function getSpaceBetweenSlides() {
-  return -1 * (document.documentElement.clientWidth - 252 - 30 - 20)
+  if (document.documentElement.clientWidth < 601) {
+    return -1 * (document.documentElement.clientWidth - 252 - 30 - 20)
+  } else {
+    return -1 * (document.documentElement.clientWidth - 359 - 100 - 30 - 31)
+  }
+  
 }
 
 const slider_1_mobile = new Swiper('.slider_1-mobile', {
@@ -453,18 +458,33 @@ const emailInput = document.querySelector('.email__input')
 const emailSubscribe = document.querySelector('.email__subscribe')
 
 emailInput.onfocus = function() {
+  console.log('focus')
   emailText.classList.add('email__text-active')
-}
-
-emailInput.onblur = function(e) {
-  
-  // emailText.classList.remove('email__text-active')
 }
 
 emailSubscribe.addEventListener('click', () => {
   emailInput.value = ''
   emailText.classList.remove('email__text-active')
 })
+
+
+//for mobile
+const emailTextMob = document.querySelector('.email__text-mobile') 
+const emailInputMob = document.querySelector('.email__input-mobile')
+const emailSubscribeMob = document.querySelector('.email__subscribe-mobile')
+
+emailInputMob.onfocus = function() {
+  console.log('focus')
+  emailTextMob.classList.add('email__text-active')
+}
+
+emailSubscribeMob.addEventListener('click', () => {
+  emailInputMob.value = ''
+  emailTextMob.classList.remove('email__text-active')
+})
+
+
+
 
 //---------------MOBILE MENU----------------//
 

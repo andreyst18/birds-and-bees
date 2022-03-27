@@ -2029,6 +2029,12 @@ input[type="search"]::-webkit-search-results-decoration {
     padding-left: 0;
   }
 
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
+
+  
    
 }
 
@@ -2063,6 +2069,156 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
+@media (max-width: 960px) {
+  .header__book-btn,
+  .header__bird-logo,
+  .header__nav {
+    display: none;
+  }
+
+  .header__nav-md {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 0 100px;
+    
+  }
+
+  .nav-md__col .menu__link {
+    margin-bottom: 10px;
+  }
+
+  .footer__content-md {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    padding-bottom: 0;
+  }
+
+  .footer__content {
+    display: none;
+  }
+
+  .footer-md__col .footer-md__logo {
+    margin-bottom: 20px;
+  }
+
+  .our-places__filter {
+    display: none;
+  }
+
+  .our-places__filter-mobile {
+    display: block;
+  }
+
+  .last-reports__main {
+    display: none;
+  }
+
+  .last-reports {
+    &__header {
+      padding-top: 53px;
+      margin-bottom: 13px;
+      align-items: center;
+    }
+        
+    &__all-reports-btn {
+      display: none;
+    }
+
+    &__next,
+    &__prev {
+      display: block;
+      height: 38px;
+      &:active {
+        background-color: #E3BF77;
+      }
+      
+    }
+
+    
+    &__nav-btns {
+      display: flex;
+      align-items: center;
+    }
+
+  }
+
+  .slider_2-mobile {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .filter-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    // justify-content: center;
+    &__item {
+      margin-right: 5px;
+      margin-bottom: 7px;
+      font: {
+        family: 'Montserrat';
+        size: 14px;
+        weight: 600;
+      }
+      opacity: 0.5;
+      padding: 5px 10px;
+      border: solid 2px;
+      border-color: #ABABAB;
+      border-radius: 20px;
+
+      &-active,
+      &:active {
+        opacity: 1;
+        color: #fff;
+        background-color: #E3BF77;
+        border-color: #E3BF77;
+      }
+    }
+  }
+
+  .our-places__title {
+    margin-top: 60px;
+  }
+
+  .main-places {
+    margin-right: 0;
+  }
+
+  .aside {
+    &:hover {
+      width: 100px;
+    }
+  }
+
+}
+
+@media (min-width: 960px) {
+  .header__book-btn,
+  .header__bird-logo,
+  .header__nav {
+    display: block;
+  }
+
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
+
+  
+}
 
 
+@media (max-width: 600px) {
+  .header__nav-md,
+  .footer__content-md {
+    display: none;
+  }
+}
 
+@media (max-width: 1180px) {
+  .our-places__main {
+    margin-right: 0;
+  }
+}
