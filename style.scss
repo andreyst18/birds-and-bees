@@ -305,6 +305,7 @@ input[type="search"]::-webkit-search-results-decoration {
   &__bird-logo {
     margin-left: 58px;
     padding-top: 15px;
+    cursor: pointer;
   }
   &__birds-and-bees-logo {
     position: absolute;
@@ -320,11 +321,13 @@ input[type="search"]::-webkit-search-results-decoration {
   &__3d-logo {
     margin-right: 31px;
     padding-top: 18px;
+    cursor: pointer;
   }
   &__basket-logo {
     position: relative;
     margin-right: 45px;
     padding-top: 18px;
+    cursor: pointer;
   }
   &__circle {
     position: absolute;
@@ -1254,6 +1257,10 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   &__policy {
     margin-right: 40px;
+    cursor: pointer;
+  }
+  &__articles {
+    cursor: pointer;
   }
 }
 
@@ -1372,6 +1379,13 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.bird-logo {
+  cursor: pointer;
+}
+
+.mobile-menu__footer svg {
+  cursor: pointer;
+}
 //--------------------TOP-PAGE mobile--------------//
 
 @media (max-width: 600px) {
@@ -1388,6 +1402,7 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 30px;
     left: 15px;
     z-index: 5;
+    cursor: pointer;
   }
 
   .header__nav-empty {
@@ -1572,6 +1587,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: #fff;
     margin-right: 10px;
     opacity: 0.5;
+    cursor: pointer;
     &:last-child {
       margin-right: 0;
     }
@@ -1637,6 +1653,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .book-btn-mobile {
     color: #2D2D2D;
+    cursor: pointer;
     &:active {
       background: #E3BF77;
     }

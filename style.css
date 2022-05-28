@@ -315,6 +315,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .header__bird-logo {
   margin-left: 58px;
   padding-top: 15px;
+  cursor: pointer;
 }
 
 .header__birds-and-bees-logo {
@@ -339,12 +340,14 @@ input[type="search"]::-webkit-search-results-decoration {
 .header__3d-logo {
   margin-right: 31px;
   padding-top: 18px;
+  cursor: pointer;
 }
 
 .header__basket-logo {
   position: relative;
   margin-right: 45px;
   padding-top: 18px;
+  cursor: pointer;
 }
 
 .header__circle {
@@ -1372,6 +1375,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .part-2__policy {
   margin-right: 40px;
+  cursor: pointer;
+}
+
+.part-2__articles {
+  cursor: pointer;
 }
 
 .call {
@@ -1501,6 +1509,14 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
+.bird-logo {
+  cursor: pointer;
+}
+
+.mobile-menu__footer svg {
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   ._container {
     margin: 0;
@@ -1511,6 +1527,7 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 30px;
     left: 15px;
     z-index: 5;
+    cursor: pointer;
   }
   .header__nav-empty {
     display: block;
@@ -1677,6 +1694,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background-color: #fff;
     margin-right: 10px;
     opacity: 0.5;
+    cursor: pointer;
   }
   .divisions-small__bullet:last-child {
     margin-right: 0;
@@ -1740,6 +1758,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
   .book-btn-mobile {
     color: #2D2D2D;
+    cursor: pointer;
   }
   .book-btn-mobile:active {
     background: #E3BF77;
